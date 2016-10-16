@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController {
     
   
     @IBOutlet weak var SwitchState: UISwitch!
+   
     @IBAction func OneOrBothTeamsSwitch(_ sender: UISwitch) {
         if SwitchState.isOn {
             collectForBothTeams = true
@@ -25,7 +26,7 @@ class SettingsViewController: UIViewController {
     
     }
     @IBAction func tippOffButton(_ sender: AnyObject) {
-        UserDefaults.standard.set("\(collectForBothTeams)", forKey: "OneOrTwoTeams")
+        UserDefaults.standard.set("\(collectForBothTeams)", forKey: "OneOrBothTeams")
         UserDefaults.standard.set("\(homeTeamColor)", forKey: "homeTeamColor")
         UserDefaults.standard.set("\(opponentTeamColor)", forKey: "opponentTeamColor")
          self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)

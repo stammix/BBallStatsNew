@@ -476,6 +476,7 @@
                         <outlet property="plusTwoMinutesLabel" destination="MEG-yS-Jja" id="e8k-3r-ed7"/>
                         <outlet property="twoMinutesBackLabel" destination="w0I-KG-Jey" id="VhM-2J-xqS"/>
                         <segue destination="mpX-o0-Jlg" kind="show" identifier="whatHappendToWhoMadeItSegue" id="8zL-XD-sr2"/>
+                        <segue destination="VIb-Wt-BZ0" kind="show" identifier="whatHappendToWhoMadeBothTeamsSegue" id="P89-Kt-20Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

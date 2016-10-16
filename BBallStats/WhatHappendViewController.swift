@@ -17,6 +17,7 @@ var currentMinutePlusTwo = 3
 var GameTime = 10
 var currentScoreTeamOne = 0
 var currentScoreTeamTwo = 0
+var segueToWhoMade = "whatHappendToWhoMadeItSegue"
 
 class WhatHappendViewController: UIViewController {
     
@@ -125,7 +126,7 @@ class WhatHappendViewController: UIViewController {
         currentScoreTeamOne = currentScoreTeamOne + 2
         currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
         UserDefaults.standard.set("2 Points", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
     }
     
     @IBAction func threePointsPressed(_ sender: UIButton) {
@@ -133,7 +134,7 @@ class WhatHappendViewController: UIViewController {
         currentScoreTeamOne = currentScoreTeamOne + 3
         currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
         UserDefaults.standard.set("3 Points", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
     }
     
     
@@ -143,39 +144,39 @@ class WhatHappendViewController: UIViewController {
         currentScoreTeamOne = currentScoreTeamOne + 1
         currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
         UserDefaults.standard.set("FT made", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
         
     }
     
     @IBAction func FTmissedPressed(_ sender: UIButton) {
         print("FT missed")
         UserDefaults.standard.set("FT missed", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
         
     }
     
     @IBAction func FoulPressed(_ sender: UIButton) {
         print("Foul")
         UserDefaults.standard.set("Foul", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
     }
     
     @IBAction func TOPressed(_ sender: UIButton) {
         print("TurnOver")
         UserDefaults.standard.set("TO", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
     }
     
     @IBAction func StealPressed(_ sender: UIButton) {
         print("Steal")
         UserDefaults.standard.set("Steal", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
         
     }
     @IBAction func TimeOutPressed(_ sender: UIButton) {
         print("TimeOut")
         UserDefaults.standard.set("TO", forKey: "action")
-        self.performSegue(withIdentifier: "whatHappendToWhoMadeItSegue", sender: self)
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
         
     }
     
@@ -184,7 +185,16 @@ class WhatHappendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        UserDefaults.standard.set("1", forKey: "minute")
+       
+        let collectBothTeamsObject = UserDefaults.standard.object(forKey: "OneOrBothTeams")
+        if let collectBothTeams = collectBothTeamsObject as? Bool {
+            if collectBothTeams == false {
+                segueToWhoMade = "whatHappendToWhoMadeItSegue"
+            } else {
+                segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
+            }
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
