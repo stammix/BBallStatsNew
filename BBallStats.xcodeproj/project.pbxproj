@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		864436471DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436451DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png */; };
+		864436481DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436461DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png */; };
+		8644364A1DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */; };
+		8644364C1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644364B1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift */; };
+		869C84831DB0268E00E43075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869C84821DB0268E00E43075 /* Main.storyboard */; };
+		869C84861DB02B6500E43075 /* BballStats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 869C84841DB02B6500E43075 /* BballStats.xcdatamodeld */; };
 		86A0D8331DAEDD7200DA3530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8321DAEDD7200DA3530 /* AppDelegate.swift */; };
-		86A0D8351DAEDD7200DA3530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8341DAEDD7200DA3530 /* ViewController.swift */; };
-		86A0D8381DAEDD7200DA3530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A0D8361DAEDD7200DA3530 /* Main.storyboard */; };
-		86A0D83B1DAEDD7200DA3530 /* BBallStats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8391DAEDD7200DA3530 /* BBallStats.xcdatamodeld */; };
 		86A0D83D1DAEDD7200DA3530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A0D83C1DAEDD7200DA3530 /* Assets.xcassets */; };
 		86A0D8401DAEDD7200DA3530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A0D83E1DAEDD7200DA3530 /* LaunchScreen.storyboard */; };
 		86A0D84B1DAEDD7200DA3530 /* BBallStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D84A1DAEDD7200DA3530 /* BBallStatsTests.swift */; };
 		86A0D8561DAEDD7200DA3530 /* BBallStatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */; };
+		86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		864436451DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BballStats Trikot-schwarz.png"; path = "../BballStats Trikot-schwarz.png"; sourceTree = "<group>"; };
+		864436461DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BballStats Trikot-weiß2.png"; path = "../BballStats Trikot-weiß2.png"; sourceTree = "<group>"; };
+		864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItViewController.swift; sourceTree = "<group>"; };
+		8644364B1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstitutionT1ViewController.swift; sourceTree = "<group>"; };
+		869C84821DB0268E00E43075 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		869C84851DB02B6500E43075 /* BballStats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BballStats.xcdatamodel; sourceTree = "<group>"; };
 		86A0D82F1DAEDD7200DA3530 /* BBallStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBallStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A0D8321DAEDD7200DA3530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86A0D8341DAEDD7200DA3530 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86A0D8371DAEDD7200DA3530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		86A0D83A1DAEDD7200DA3530 /* BBallStats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BBallStats.xcdatamodel; sourceTree = "<group>"; };
 		86A0D83C1DAEDD7200DA3530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86A0D83F1DAEDD7200DA3530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86A0D8411DAEDD7200DA3530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		86A0D8511DAEDD7200DA3530 /* BBallStatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBallStatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallStatsUITests.swift; sourceTree = "<group>"; };
 		86A0D8571DAEDD7200DA3530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +108,16 @@
 			isa = PBXGroup;
 			children = (
 				86A0D8321DAEDD7200DA3530 /* AppDelegate.swift */,
-				86A0D8341DAEDD7200DA3530 /* ViewController.swift */,
-				86A0D8361DAEDD7200DA3530 /* Main.storyboard */,
+				86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */,
+				8644364B1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift */,
+				864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */,
+				869C84821DB0268E00E43075 /* Main.storyboard */,
 				86A0D83C1DAEDD7200DA3530 /* Assets.xcassets */,
 				86A0D83E1DAEDD7200DA3530 /* LaunchScreen.storyboard */,
 				86A0D8411DAEDD7200DA3530 /* Info.plist */,
-				86A0D8391DAEDD7200DA3530 /* BBallStats.xcdatamodeld */,
+				869C84841DB02B6500E43075 /* BballStats.xcdatamodeld */,
+				864436451DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png */,
+				864436461DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png */,
 			);
 			path = BBallStats;
 			sourceTree = "<group>";
@@ -235,9 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				864436481DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png in Resources */,
+				864436471DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png in Resources */,
 				86A0D8401DAEDD7200DA3530 /* LaunchScreen.storyboard in Resources */,
+				869C84831DB0268E00E43075 /* Main.storyboard in Resources */,
 				86A0D83D1DAEDD7200DA3530 /* Assets.xcassets in Resources */,
-				86A0D8381DAEDD7200DA3530 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A0D83B1DAEDD7200DA3530 /* BBallStats.xcdatamodeld in Sources */,
-				86A0D8351DAEDD7200DA3530 /* ViewController.swift in Sources */,
+				8644364A1DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift in Sources */,
+				86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */,
+				8644364C1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift in Sources */,
 				86A0D8331DAEDD7200DA3530 /* AppDelegate.swift in Sources */,
+				869C84861DB02B6500E43075 /* BballStats.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		86A0D8361DAEDD7200DA3530 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86A0D8371DAEDD7200DA3530 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		86A0D83E1DAEDD7200DA3530 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -509,6 +517,7 @@
 				86A0D85C1DAEDD7200DA3530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86A0D85D1DAEDD7200DA3530 /* Build configuration list for PBXNativeTarget "BBallStatsTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +526,7 @@
 				86A0D85F1DAEDD7200DA3530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86A0D8601DAEDD7200DA3530 /* Build configuration list for PBXNativeTarget "BBallStatsUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,17 +535,18 @@
 				86A0D8621DAEDD7200DA3530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		86A0D8391DAEDD7200DA3530 /* BBallStats.xcdatamodeld */ = {
+		869C84841DB02B6500E43075 /* BballStats.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				86A0D83A1DAEDD7200DA3530 /* BBallStats.xcdatamodel */,
+				869C84851DB02B6500E43075 /* BballStats.xcdatamodel */,
 			);
-			currentVersion = 86A0D83A1DAEDD7200DA3530 /* BBallStats.xcdatamodel */;
-			path = BBallStats.xcdatamodeld;
+			currentVersion = 869C84851DB02B6500E43075 /* BballStats.xcdatamodel */;
+			path = BballStats.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
