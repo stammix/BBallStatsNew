@@ -36,22 +36,34 @@ class InGameSettingsViewController: UIViewController {
     
     @IBAction func HomeTeamBlack(_ sender: AnyObject) {
         homeTeamColor = UIColor.black
+        UserDefaults.standard.set("black", forKey: "HomeJerseyColor")
+        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
     }
     @IBAction func HomeTeamBlue(_ sender: AnyObject) {
         homeTeamColor = UIColor.blue
+        UserDefaults.standard.set("blue", forKey: "HomeJerseyColor")
+        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
     }
     
     @IBAction func HomeTeamRed(_ sender: AnyObject) {
         homeTeamColor = UIColor.red
+        UserDefaults.standard.set("red", forKey: "HomeJerseyColor")
+        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
     }
     
     @IBAction func OpponentTeamBlack(_ sender: UIButton) {
         opponentTeamColor = UIColor.black
+        UserDefaults.standard.set("black", forKey: "OpponentJerseyColor")
+        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
     }
     @IBAction func OpponentTeamBlue(_ sender: UIButton) {
+        UserDefaults.standard.set("blue", forKey: "OpponentJerseyColor")
+        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
          opponentTeamColor = UIColor.blue
     }
     @IBAction func OpponentTeamRed(_ sender: UIButton) {
+        UserDefaults.standard.set("red", forKey: "OpponentJerseyColor")
+        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
          opponentTeamColor = UIColor.red
     }
     

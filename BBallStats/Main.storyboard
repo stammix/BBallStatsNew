@@ -509,7 +509,7 @@
                                                             <constraint firstAttribute="width" constant="45" id="0Lo-6r-Evd"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P1" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P1" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P1Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Hj6-b7-jpq"/>
                                                         </connections>
@@ -517,7 +517,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC4-rw-j42">
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P2" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P2" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="eVW-Lt-cXI"/>
                                                         </connections>
@@ -536,7 +536,7 @@
                                                             <constraint firstAttribute="width" constant="45" id="vLg-7X-6Kd"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P3" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P3" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="462-ct-ZBh"/>
                                                         </connections>
@@ -548,7 +548,7 @@
                                                             <constraint firstAttribute="width" constant="45" id="lKr-sA-hOa"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P4" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P4" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="cSe-D6-10X"/>
                                                         </connections>
@@ -560,7 +560,7 @@
                                                             <constraint firstAttribute="height" constant="60" id="hhj-pq-J9d"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P5" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <state key="highlighted" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                         <connections>
                                                             <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Svl-P7-Y44"/>
@@ -581,7 +581,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="tj3-Ct-Rkz"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <state key="normal" title="T1P6" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P6" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="vYQ-g8-cb2"/>
                                                         </connections>
@@ -593,7 +593,7 @@
                                                             <constraint firstAttribute="width" constant="35" id="xHT-jx-m9i"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <state key="normal" title="T1P7" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P7" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="7Mp-hy-V2D"/>
                                                         </connections>
@@ -605,7 +605,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="uie-4s-8lT"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <state key="normal" title="T1P8" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P8" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="g7l-H2-273"/>
                                                         </connections>
@@ -622,7 +622,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P9" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P9" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="a10-DW-SxQ"/>
                                                         </connections>
@@ -635,7 +635,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P10" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P10" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="oZe-2k-4CT"/>
                                                         </connections>
@@ -648,7 +648,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P11" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P11" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="gJe-la-QeX"/>
                                                         </connections>
@@ -661,7 +661,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P12" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P12" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="LvJ-Oe-1xm"/>
                                                         </connections>
@@ -733,7 +733,7 @@
                                                             <constraint firstAttribute="height" constant="60" id="5ih-IH-vgh"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P1" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P1" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="SubForP1:" destination="CrG-TL-V9f" eventType="touchUpInside" id="Ng3-ac-bUh"/>
                                                         </connections>
@@ -745,7 +745,7 @@
                                                             <constraint firstAttribute="height" constant="60" id="jFh-1I-6qa"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P2" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P2" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="SubForP2:" destination="CrG-TL-V9f" eventType="touchUpInside" id="E99-vK-h86"/>
                                                         </connections>
@@ -761,7 +761,7 @@
                                                             <constraint firstAttribute="width" constant="45" id="UFN-GC-X2k"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P3" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P3" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="SubForP3:" destination="CrG-TL-V9f" eventType="touchUpInside" id="JPb-pr-CJy"/>
                                                         </connections>
@@ -773,7 +773,7 @@
                                                             <constraint firstAttribute="height" constant="60" id="fpV-qQ-D6I"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P4" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P4" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="SubForP4:" destination="CrG-TL-V9f" eventType="touchUpInside" id="S6x-VI-1jN"/>
                                                         </connections>
@@ -785,7 +785,7 @@
                                                             <constraint firstAttribute="width" constant="45" id="dHw-jf-8yg"/>
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="T1P5" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="SubForP5:" destination="CrG-TL-V9f" eventType="touchUpInside" id="FYA-rh-g6o"/>
                                                         </connections>
@@ -810,6 +810,13 @@
                             <constraint firstItem="yq9-Z5-TZZ" firstAttribute="centerX" secondItem="qaq-fH-8kd" secondAttribute="centerX" id="kJH-LR-Jhx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SubButton1" destination="pOu-xX-7Zc" id="uI6-lM-Qiy"/>
+                        <outlet property="SubButton2" destination="Pue-4b-gNS" id="Inp-TW-93Z"/>
+                        <outlet property="SubButton3" destination="Uwx-kK-H7c" id="yvi-IZ-CmV"/>
+                        <outlet property="SubButton4" destination="ITg-10-Kc6" id="rsT-Wy-bpy"/>
+                        <outlet property="SubButton5" destination="GsH-4G-eLY" id="93r-KB-y4v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AE7-9L-imJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -845,7 +852,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="45" id="bIg-lm-QPE"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T1P1" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P1" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P1Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="GIf-cM-Rdn"/>
                                                                 </connections>
@@ -858,7 +865,7 @@
                                                                     <constraint firstAttribute="width" constant="45" id="twd-mU-C9k"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <state key="normal" title="T1P2" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P2" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HsA-UA-bAS"/>
                                                                     <action selector="T1P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="xsV-pB-hGd"/>
@@ -874,7 +881,7 @@
                                                                     <constraint firstAttribute="height" constant="60" id="Fzn-B7-4AX"/>
                                                                     <constraint firstAttribute="width" constant="45" id="X3s-RD-etg"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T1P3" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P3" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="nX4-H6-G3O"/>
                                                                     <action selector="T1P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qho-jo-f0d"/>
@@ -886,7 +893,7 @@
                                                                     <constraint firstAttribute="height" constant="60" id="afd-EO-l7H"/>
                                                                     <constraint firstAttribute="width" constant="45" id="fpg-nE-T8j"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T1P4" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P4" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="ANb-N5-Y0T"/>
                                                                     <action selector="T1P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="BpD-i8-YXa"/>
@@ -898,7 +905,7 @@
                                                                     <constraint firstAttribute="width" constant="45" id="65m-vt-FSv"/>
                                                                     <constraint firstAttribute="height" constant="60" id="rXa-0i-TBB"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T1P5" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="6zp-mO-ZuF"/>
                                                                     <action selector="T1P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="IwM-TR-79X"/>
@@ -919,7 +926,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="nc9-Kj-3bM"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T1P6" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P6" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="dgH-ao-us2"/>
                                                                     <action selector="T1P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="kRF-kp-s6m"/>
@@ -932,7 +939,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="oGE-JK-8sH"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T1P7" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P7" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="aXd-Zr-zsF"/>
                                                                     <action selector="T1P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qFP-Hq-nyL"/>
@@ -945,7 +952,7 @@
                                                                     <constraint firstAttribute="height" constant="45" id="awn-w5-uEA"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T1P8" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P8" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sc8-3O-jX1"/>
                                                                     <action selector="T1P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="wKp-6R-43J"/>
@@ -962,7 +969,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="cxj-ee-wtP"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T1P9" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P9" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="JTe-na-8pz"/>
                                                                     <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Rpx-C0-JEY"/>
@@ -975,7 +982,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="hRU-LU-aXW"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T1P10" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P10" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="18W-EZ-xH8"/>
                                                                     <action selector="T1P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qqZ-mV-HuQ"/>
@@ -988,7 +995,7 @@
                                                                     <constraint firstAttribute="height" constant="45" id="gHe-Zo-st4"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T1P11" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P11" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="0C5-tJ-4M3"/>
                                                                     <action selector="T1P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="5rz-4A-irx"/>
@@ -1001,7 +1008,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="mU9-V4-Ykq"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T1P12" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <state key="normal" title="T1P12" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="OQQ-lf-dTp"/>
                                                                     <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="r5O-i7-QNM"/>
@@ -1028,7 +1035,7 @@
                                                                     <constraint firstAttribute="height" constant="60" id="zsZ-rz-V5n"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <state key="normal" title="T2P1" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P1" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T2P1Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="ZPb-Bt-nsz"/>
                                                                 </connections>
@@ -1041,7 +1048,7 @@
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="aCe-TJ-71K"/>
                                                                     <constraint firstAttribute="height" constant="60" id="xFa-To-zCQ"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T2P2" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P2" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Osh-u4-WyO"/>
                                                                     <action selector="T2P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="7V8-6c-lk2"/>
@@ -1057,7 +1064,7 @@
                                                                     <constraint firstAttribute="height" constant="60" id="5oH-GV-LKa"/>
                                                                     <constraint firstAttribute="width" constant="45" id="xY7-ab-rZS"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T2P3" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P3" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="yAX-KQ-y1m"/>
                                                                     <action selector="T2P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Wrc-sN-A4b"/>
@@ -1069,7 +1076,7 @@
                                                                     <constraint firstAttribute="height" constant="60" id="FTc-f0-eY1"/>
                                                                     <constraint firstAttribute="width" constant="45" id="JhE-NC-6v7"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T2P4" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P4" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HZ2-2x-omC"/>
                                                                     <action selector="T2P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="eUa-VS-sF1"/>
@@ -1081,7 +1088,7 @@
                                                                     <constraint firstAttribute="height" constant="60" id="Xzd-KP-A8Y"/>
                                                                     <constraint firstAttribute="width" constant="45" id="fxB-YZ-ku5"/>
                                                                 </constraints>
-                                                                <state key="normal" title="T2P5" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P5" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="bUI-cr-eq7"/>
                                                                     <action selector="T2P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="bd8-bs-ohP"/>
@@ -1102,7 +1109,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="AAj-2G-ZFP"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T2P6" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P6" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="eae-Ni-vKl"/>
                                                                     <action selector="T2P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="2pl-q1-D0B"/>
@@ -1115,7 +1122,7 @@
                                                                     <constraint firstAttribute="height" constant="45" id="yle-Sz-D8C"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T2P7" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P7" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="H2c-ec-oAG"/>
                                                                     <action selector="T2P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="PXa-ee-t0L"/>
@@ -1128,7 +1135,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="X9X-tX-EQ8"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T2P8" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P8" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Sqn-eH-pRo"/>
                                                                     <action selector="T2P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="fFa-rr-up6"/>
@@ -1146,7 +1153,7 @@
                                                                     <constraint firstAttribute="height" constant="45" id="wyK-PC-SZE"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T2P9" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P9" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sNa-bZ-wL9"/>
                                                                     <action selector="T2P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Od8-Nq-B6z"/>
@@ -1159,7 +1166,7 @@
                                                                     <constraint firstAttribute="height" constant="45" id="fmd-bO-5g3"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T2P10" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P10" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="jr7-30-xhR"/>
                                                                     <action selector="T2P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="QCh-m0-l8S"/>
@@ -1172,7 +1179,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="T4g-Gx-xCw"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T2P11" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P11" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="KQD-5J-AdA"/>
                                                                     <action selector="T2P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="aDB-79-OEI"/>
@@ -1185,7 +1192,7 @@
                                                                     <constraint firstAttribute="width" constant="35" id="m8S-x4-UCj"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <state key="normal" title="T2P12" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <state key="normal" title="T2P12" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
                                                                     <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="BdR-gJ-Jpj"/>
                                                                     <action selector="T2P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="I7e-zZ-o9F"/>
@@ -1220,10 +1227,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BballStats Trikot-schwarz.png" width="420" height="660"/>
         <image name="BballStats Trikot-weiß2.png" width="419" height="666"/>
+        <image name="BballStatsJerseyBlack.png" width="420" height="660"/>
+        <image name="BballStatsJerseyWhite.png" width="419" height="666"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZcD-N2-Yvd"/>
+        <segue reference="aPV-kE-8ZV"/>
     </inferredMetricsTieBreakers>
 </document>
