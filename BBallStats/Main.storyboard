@@ -706,10 +706,10 @@
             </objects>
             <point key="canvasLocation" x="1181" y="44"/>
         </scene>
-        <!--SubstitutionT1 View Controller-->
+        <!--Substitution View Controller-->
         <scene sceneID="b8j-pK-KFB">
             <objects>
-                <viewController id="CrG-TL-V9f" customClass="SubstitutionT1ViewController" customModule="BBallStats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CrG-TL-V9f" customClass="SubstitutionViewController" customModule="BBallStats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IVR-en-DNw"/>
                         <viewControllerLayoutGuide type="bottom" id="AGV-Sb-gDC"/>
@@ -735,7 +735,7 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="T1P1" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                         <connections>
-                                                            <action selector="SubForT1P1:" destination="CrG-TL-V9f" eventType="touchUpInside" id="tR7-5d-znw"/>
+                                                            <action selector="SubForP1:" destination="CrG-TL-V9f" eventType="touchUpInside" id="Ng3-ac-bUh"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-4b-gNS">
@@ -747,7 +747,7 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="T1P2" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                         <connections>
-                                                            <action selector="SubForT1P2:" destination="CrG-TL-V9f" eventType="touchUpInside" id="kem-kR-00d"/>
+                                                            <action selector="SubForP2:" destination="CrG-TL-V9f" eventType="touchUpInside" id="E99-vK-h86"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -763,7 +763,7 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="T1P3" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                         <connections>
-                                                            <action selector="SubForT1P3:" destination="CrG-TL-V9f" eventType="touchUpInside" id="oI4-09-zfK"/>
+                                                            <action selector="SubForP3:" destination="CrG-TL-V9f" eventType="touchUpInside" id="JPb-pr-CJy"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-10-Kc6">
@@ -775,7 +775,7 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="T1P4" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                         <connections>
-                                                            <action selector="SubForT1P4:" destination="CrG-TL-V9f" eventType="touchUpInside" id="efJ-1X-K1e"/>
+                                                            <action selector="SubForP4:" destination="CrG-TL-V9f" eventType="touchUpInside" id="S6x-VI-1jN"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsH-4G-eLY">
@@ -787,7 +787,7 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="T1P5" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                         <connections>
-                                                            <action selector="SubForT1P5:" destination="CrG-TL-V9f" eventType="touchUpInside" id="ekn-OQ-Xcj"/>
+                                                            <action selector="SubForP5:" destination="CrG-TL-V9f" eventType="touchUpInside" id="FYA-rh-g6o"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
