@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  InGameSettingsViewController.swift
 //  BBallStats
 //
 //  Created by Fred Erik on 16.10.16.
@@ -8,25 +8,27 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class InGameSettingsViewController: UIViewController {
 
-    var collectForBothTeams = false
+ //   var collectForBothTeams = false
     var homeTeamColor = UIColor.white
     var opponentTeamColor = UIColor.black
     
   
     @IBOutlet weak var SwitchState: UISwitch!
    
-    @IBAction func OneOrBothTeamsSwitch(_ sender: UISwitch) {
-        if SwitchState.isOn {
-            collectForBothTeams = true
-        } else {
-            collectForBothTeams = false
-        }
-    
-    }
+
     @IBAction func tippOffButton(_ sender: AnyObject) {
-        UserDefaults.standard.set("\(collectForBothTeams)", forKey: "OneOrBothTeams")
+        
+        let settings = Settings()
+            settings.statsForBoth = SwitchState.isOn
+        
+            if SwitchState.isOn {
+                UserDefaults.standard.set(true, forKey: "OneOrBothTeams")
+            } else {
+                UserDefaults.standard.set(false, forKey: "OneOrBothTeams")
+            }
+
         UserDefaults.standard.set("\(homeTeamColor)", forKey: "homeTeamColor")
         UserDefaults.standard.set("\(opponentTeamColor)", forKey: "opponentTeamColor")
          self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
@@ -55,8 +57,8 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    
     }
-
 }

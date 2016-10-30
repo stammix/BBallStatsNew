@@ -23,6 +23,9 @@ class WhatHappendViewController: UIViewController {
     
     //GameTime
    
+    @IBAction func backToSettingsButton(_ sender: AnyObject) {
+        performSegue(withIdentifier: "toInGameSettingsSegue", sender: nil)
+    }
     
     @IBOutlet weak var lastStatMinuteLabel: UILabel!
     
@@ -186,19 +189,15 @@ class WhatHappendViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         UserDefaults.standard.set("1", forKey: "minute")
-       
-        let collectBothTeamsObject = UserDefaults.standard.object(forKey: "OneOrBothTeams")
-        if let collectBothTeams = collectBothTeamsObject as? Bool {
-            if collectBothTeams == false {
-                segueToWhoMade = "whatHappendToWhoMadeItSegue"
-            } else {
-                segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
-            }
-        }
+        
+   //     if UserDefaults.resetStandardUserDefaults().object(forKey: "OneOrBothTeams") == true {
+        //        segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
-        if var lastStatMinute = lastStatMinuteObject as? String {
+        if let lastStatMinute = lastStatMinuteObject as? String {
             
             if lastStatMinute == "1" {
                 lastStatMinuteLabel.text = "1st Minute"
@@ -216,6 +215,12 @@ class WhatHappendViewController: UIViewController {
                 lastStatActionLabel.text = "\(lastStatAction)"
             }
             
+        }
+        _ = UserDefaults.standard.bool(forKey: "OneOrBothTeams")
+        if UserDefaults.standard.bool(forKey: "OneOrBothTeams"){
+            segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
+        } else {
+            segueToWhoMade = "whatHappendToWhoMadeItSegue"
         }
         
         let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")

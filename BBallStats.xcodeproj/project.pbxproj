@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		860341861DB419A600BE4CB7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860341851DB419A600BE4CB7 /* SettingsViewController.swift */; };
+		860341861DB419A600BE4CB7 /* InGameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */; };
 		864436471DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436451DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png */; };
 		864436481DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436461DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png */; };
 		8644364A1DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */; };
 		8644364C1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644364B1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift */; };
+		869AAAE11DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AAAE01DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift */; };
 		869C84831DB0268E00E43075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869C84821DB0268E00E43075 /* Main.storyboard */; };
 		869C84861DB02B6500E43075 /* BballStats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 869C84841DB02B6500E43075 /* BballStats.xcdatamodeld */; };
 		86A0D8331DAEDD7200DA3530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8321DAEDD7200DA3530 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 		86A0D84B1DAEDD7200DA3530 /* BBallStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D84A1DAEDD7200DA3530 /* BBallStatsTests.swift */; };
 		86A0D8561DAEDD7200DA3530 /* BBallStatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */; };
 		86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */; };
+		86BAC81C1DBB976900553CEA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BAC81B1DBB976900553CEA /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		860341851DB419A600BE4CB7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameSettingsViewController.swift; sourceTree = "<group>"; };
 		864436451DAFF5E100C7C6D8 /* BballStats Trikot-schwarz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BballStats Trikot-schwarz.png"; path = "../BballStats Trikot-schwarz.png"; sourceTree = "<group>"; };
 		864436461DAFF5E100C7C6D8 /* BballStats Trikot-weiß2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BballStats Trikot-weiß2.png"; path = "../BballStats Trikot-weiß2.png"; sourceTree = "<group>"; };
 		864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItViewController.swift; sourceTree = "<group>"; };
 		8644364B1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstitutionT1ViewController.swift; sourceTree = "<group>"; };
+		869AAAE01DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItBothTeamsViewController.swift; sourceTree = "<group>"; };
 		869C84821DB0268E00E43075 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		869C84851DB02B6500E43075 /* BballStats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BballStats.xcdatamodel; sourceTree = "<group>"; };
 		86A0D82F1DAEDD7200DA3530 /* BBallStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBallStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +62,7 @@
 		86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallStatsUITests.swift; sourceTree = "<group>"; };
 		86A0D8571DAEDD7200DA3530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
+		86BAC81B1DBB976900553CEA /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +114,12 @@
 			isa = PBXGroup;
 			children = (
 				86A0D8321DAEDD7200DA3530 /* AppDelegate.swift */,
-				860341851DB419A600BE4CB7 /* SettingsViewController.swift */,
+				860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */,
+				86BAC81B1DBB976900553CEA /* Settings.swift */,
 				86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */,
 				8644364B1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift */,
 				864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */,
+				869AAAE01DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift */,
 				869C84821DB0268E00E43075 /* Main.storyboard */,
 				86A0D83C1DAEDD7200DA3530 /* Assets.xcassets */,
 				86A0D83E1DAEDD7200DA3530 /* LaunchScreen.storyboard */,
@@ -280,11 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8644364A1DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift in Sources */,
+				869AAAE11DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift in Sources */,
 				86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */,
 				8644364C1DB0021900C7C6D8 /* SubstitutionT1ViewController.swift in Sources */,
 				86A0D8331DAEDD7200DA3530 /* AppDelegate.swift in Sources */,
+				86BAC81C1DBB976900553CEA /* Settings.swift in Sources */,
 				869C84861DB02B6500E43075 /* BballStats.xcdatamodeld in Sources */,
-				860341861DB419A600BE4CB7 /* SettingsViewController.swift in Sources */,
+				860341861DB419A600BE4CB7 /* InGameSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

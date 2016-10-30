@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVl-uw-c16">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVl-uw-c16">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--In Game Settings View Controller-->
         <scene sceneID="c60-NP-Efa">
             <objects>
-                <viewController id="bVl-uw-c16" customClass="SettingsViewController" customModule="BBallStats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bVl-uw-c16" customClass="InGameSettingsViewController" customModule="BBallStats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ehg-mw-VeC"/>
                         <viewControllerLayoutGuide type="bottom" id="0Nj-BN-MJm"/>
@@ -39,8 +39,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Opponent Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-Hy-FWD">
-                                <frame key="frameInset" minX="491" minY="203" width="123" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-Hy-FWD">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,12 +47,8 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-6a-7Pj">
                                 <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="OneOrBothTeamsSwitch:" destination="bVl-uw-c16" eventType="valueChanged" id="DaU-4U-Yyq"/>
-                                </connections>
                             </switch>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-dZ-zBH">
-                                <frame key="frameInset" minX="223" minY="235" width="110" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-dZ-zBH">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-jf-M91">
                                         <subviews>
@@ -167,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-Zv-QZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1036" y="374"/>
+            <point key="canvasLocation" x="-330" y="-494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J23-87-6XA">
@@ -463,7 +458,13 @@
                             <constraint firstItem="5vt-jl-78e" firstAttribute="top" secondItem="sLa-e8-dk4" secondAttribute="bottom" constant="-2" id="zbo-AN-4ab"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="What happend?" id="kgx-06-eSV"/>
+                    <navigationItem key="navigationItem" title="What happend?" id="kgx-06-eSV">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="gIz-9b-rog">
+                            <connections>
+                                <action selector="backToSettingsButton:" destination="BYZ-38-t0r" id="9HW-yj-r5y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CurrentMinuteLabel" destination="5vt-jl-78e" id="Ef5-mD-WGl"/>
                         <outlet property="currentScoreTeamOneLabel" destination="aPa-8A-3tX" id="nqL-1M-65B"/>
@@ -477,6 +478,7 @@
                         <outlet property="twoMinutesBackLabel" destination="w0I-KG-Jey" id="VhM-2J-xqS"/>
                         <segue destination="mpX-o0-Jlg" kind="show" identifier="whatHappendToWhoMadeItSegue" id="8zL-XD-sr2"/>
                         <segue destination="VIb-Wt-BZ0" kind="show" identifier="whatHappendToWhoMadeBothTeamsSegue" id="P89-Kt-20Q"/>
+                        <segue destination="bVl-uw-c16" kind="presentation" identifier="toInGameSettingsSegue" id="Qxu-aM-CDM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -720,14 +722,11 @@
                                 <frame key="frameInset" minX="206" minY="125" width="255" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yq9-Z5-TZZ">
-                                        <frame key="frameInset" width="255" height="125"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yq9-Z5-TZZ">
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zok-qw-AOY">
-                                                <frame key="frameInset" minX="53" width="150" height="60"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zok-qw-AOY">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-xX-7Zc">
-                                                        <frame key="frameInset" width="45" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-xX-7Zc">
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="23D-oG-Iqn"/>
@@ -739,8 +738,7 @@
                                                             <action selector="SubForT1P1:" destination="CrG-TL-V9f" eventType="touchUpInside" id="tR7-5d-znw"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-4b-gNS">
-                                                        <frame key="frameInset" minX="105" width="45" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-4b-gNS">
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="fDU-7g-0tf"/>
@@ -754,11 +752,9 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Nsp-Xh-99A">
-                                                <frame key="frameInset" minY="65" width="255" height="60"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Nsp-Xh-99A">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-kK-H7c">
-                                                        <frame key="frameInset" width="45" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-kK-H7c">
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="1Z2-2W-nCg"/>
@@ -770,8 +766,7 @@
                                                             <action selector="SubForT1P3:" destination="CrG-TL-V9f" eventType="touchUpInside" id="oI4-09-zfK"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-10-Kc6">
-                                                        <frame key="frameInset" minX="105" width="45" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-10-Kc6">
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="BED-fi-oos"/>
@@ -783,8 +778,7 @@
                                                             <action selector="SubForT1P4:" destination="CrG-TL-V9f" eventType="touchUpInside" id="efJ-1X-K1e"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsH-4G-eLY">
-                                                        <frame key="frameInset" minX="210" width="45" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsH-4G-eLY">
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="6Eq-2x-oQ6"/>
@@ -812,6 +806,8 @@
                         <constraints>
                             <constraint firstItem="qaq-fH-8kd" firstAttribute="top" secondItem="IVR-en-DNw" secondAttribute="bottom" constant="5" id="12n-xg-X8X"/>
                             <constraint firstItem="qaq-fH-8kd" firstAttribute="centerX" secondItem="g9l-Eq-jSb" secondAttribute="centerX" id="DvD-gt-kst"/>
+                            <constraint firstItem="yq9-Z5-TZZ" firstAttribute="top" secondItem="qaq-fH-8kd" secondAttribute="bottom" constant="24.5" id="ds1-BN-8NN"/>
+                            <constraint firstItem="yq9-Z5-TZZ" firstAttribute="centerX" secondItem="qaq-fH-8kd" secondAttribute="centerX" id="kJH-LR-Jhx"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -819,10 +815,10 @@
             </objects>
             <point key="canvasLocation" x="1927" y="44"/>
         </scene>
-        <!--View Controller-->
+        <!--Who Made It Both Teams View Controller-->
         <scene sceneID="Kfm-XQ-15v">
             <objects>
-                <viewController id="VIb-Wt-BZ0" sceneMemberID="viewController">
+                <viewController id="VIb-Wt-BZ0" customClass="WhoMadeItBothTeamsViewController" customModule="BBallStats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zGx-6m-bSh"/>
                         <viewControllerLayoutGuide type="bottom" id="MUo-RA-9ed"/>
@@ -850,6 +846,9 @@
                                                                     <constraint firstAttribute="width" constant="45" id="bIg-lm-QPE"/>
                                                                 </constraints>
                                                                 <state key="normal" title="T1P1" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P1Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="GIf-cM-Rdn"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-5g-dhV">
                                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -862,6 +861,7 @@
                                                                 <state key="normal" title="T1P2" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HsA-UA-bAS"/>
+                                                                    <action selector="T1P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="xsV-pB-hGd"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -877,6 +877,7 @@
                                                                 <state key="normal" title="T1P3" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="nX4-H6-G3O"/>
+                                                                    <action selector="T1P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qho-jo-f0d"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7I-dj-tul">
@@ -888,6 +889,7 @@
                                                                 <state key="normal" title="T1P4" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="ANb-N5-Y0T"/>
+                                                                    <action selector="T1P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="BpD-i8-YXa"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJ8-rH-hOD">
@@ -899,6 +901,7 @@
                                                                 <state key="normal" title="T1P5" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="6zp-mO-ZuF"/>
+                                                                    <action selector="T1P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="IwM-TR-79X"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -919,6 +922,7 @@
                                                                 <state key="normal" title="T1P6" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="dgH-ao-us2"/>
+                                                                    <action selector="T1P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="kRF-kp-s6m"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPZ-8q-9w2">
@@ -931,6 +935,7 @@
                                                                 <state key="normal" title="T1P7" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="aXd-Zr-zsF"/>
+                                                                    <action selector="T1P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qFP-Hq-nyL"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luB-pN-oQx">
@@ -943,6 +948,7 @@
                                                                 <state key="normal" title="T1P8" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sc8-3O-jX1"/>
+                                                                    <action selector="T1P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="wKp-6R-43J"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -958,6 +964,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T1P9" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
+                                                                    <action selector="T1P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="JTe-na-8pz"/>
                                                                     <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Rpx-C0-JEY"/>
                                                                 </connections>
                                                             </button>
@@ -971,6 +978,7 @@
                                                                 <state key="normal" title="T1P10" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="18W-EZ-xH8"/>
+                                                                    <action selector="T1P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qqZ-mV-HuQ"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rd-Ne-Jhh">
@@ -983,6 +991,7 @@
                                                                 <state key="normal" title="T1P11" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
                                                                     <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="0C5-tJ-4M3"/>
+                                                                    <action selector="T1P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="5rz-4A-irx"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxp-zf-5k5">
@@ -994,6 +1003,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T1P12" backgroundImage="BballStats Trikot-weiß2.png"/>
                                                                 <connections>
+                                                                    <action selector="T1P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="OQQ-lf-dTp"/>
                                                                     <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="r5O-i7-QNM"/>
                                                                 </connections>
                                                             </button>
@@ -1019,6 +1029,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <state key="normal" title="T2P1" backgroundImage="BballStats Trikot-schwarz.png"/>
+                                                                <connections>
+                                                                    <action selector="T2P1Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="ZPb-Bt-nsz"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iw2-TB-5PX">
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1031,6 +1044,7 @@
                                                                 <state key="normal" title="T2P2" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Osh-u4-WyO"/>
+                                                                    <action selector="T2P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="7V8-6c-lk2"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1046,6 +1060,7 @@
                                                                 <state key="normal" title="T2P3" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="yAX-KQ-y1m"/>
+                                                                    <action selector="T2P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Wrc-sN-A4b"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKs-WU-5bb">
@@ -1057,6 +1072,7 @@
                                                                 <state key="normal" title="T2P4" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HZ2-2x-omC"/>
+                                                                    <action selector="T2P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="eUa-VS-sF1"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5N-DA-bly">
@@ -1068,6 +1084,7 @@
                                                                 <state key="normal" title="T2P5" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="bUI-cr-eq7"/>
+                                                                    <action selector="T2P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="bd8-bs-ohP"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1088,6 +1105,7 @@
                                                                 <state key="normal" title="T2P6" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="eae-Ni-vKl"/>
+                                                                    <action selector="T2P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="2pl-q1-D0B"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2s-GO-qGD">
@@ -1100,6 +1118,7 @@
                                                                 <state key="normal" title="T2P7" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="H2c-ec-oAG"/>
+                                                                    <action selector="T2P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="PXa-ee-t0L"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZo-Ck-Gmh">
@@ -1112,6 +1131,7 @@
                                                                 <state key="normal" title="T2P8" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Sqn-eH-pRo"/>
+                                                                    <action selector="T2P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="fFa-rr-up6"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1129,6 +1149,7 @@
                                                                 <state key="normal" title="T2P9" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sNa-bZ-wL9"/>
+                                                                    <action selector="T2P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Od8-Nq-B6z"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNi-Ja-6jU">
@@ -1141,6 +1162,7 @@
                                                                 <state key="normal" title="T2P10" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="jr7-30-xhR"/>
+                                                                    <action selector="T2P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="QCh-m0-l8S"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmI-se-zRb">
@@ -1153,6 +1175,7 @@
                                                                 <state key="normal" title="T2P11" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="KQD-5J-AdA"/>
+                                                                    <action selector="T2P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="aDB-79-OEI"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFn-1S-bfd">
@@ -1165,6 +1188,7 @@
                                                                 <state key="normal" title="T2P12" backgroundImage="BballStats Trikot-schwarz.png"/>
                                                                 <connections>
                                                                     <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="BdR-gJ-Jpj"/>
+                                                                    <action selector="T2P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="I7e-zZ-o9F"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1186,6 +1210,9 @@
                             <constraint firstItem="QYr-y8-2fq" firstAttribute="centerX" secondItem="CZt-KD-DD7" secondAttribute="centerX" id="rIW-fn-VMl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="CrG-TL-V9f" kind="show" identifier="BothTeamsToSubstitutionSegue" id="ZcD-N2-Yvd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Riy-7q-RXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1196,4 +1223,7 @@
         <image name="BballStats Trikot-schwarz.png" width="420" height="660"/>
         <image name="BballStats Trikot-weiß2.png" width="419" height="666"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZcD-N2-Yvd"/>
+    </inferredMetricsTieBreakers>
 </document>
