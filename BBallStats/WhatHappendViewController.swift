@@ -190,11 +190,95 @@ class WhatHappendViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         UserDefaults.standard.set("1", forKey: "minute")
         
-   //     if UserDefaults.resetStandardUserDefaults().object(forKey: "OneOrBothTeams") == true {
-        //        segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue
+       /* //TeamColors
+        if changedTeam == "T1" {
+            let homeJerseyColorObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
+            if let homeJerseyColor = homeJerseyColorObject as? String {
+                if homeJerseyColor == "black" {
+                    paleJerseyColor = false
+                    JerseyColor = UIColor.black
+                } else if homeJerseyColor == "blue" {
+                    paleJerseyColor = false
+                    JerseyColor = UIColor.blue
+                } else if homeJerseyColor == "red" {
+                    paleJerseyColor = false
+                    JerseyColor = UIColor.red
+                } else if homeJerseyColor == "white" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.white
+                } else if homeJerseyColor == "yellow" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.yellow
+                } else if homeJerseyColor == "green" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.green
+                }
+            }
+        } else if changedTeam == "T2" {
+            let opponentJerseyColorObject = UserDefaults.standard.object(forKey: "OpponentJerseyColor")
+            if let opponentJerseyColor = opponentJerseyColorObject as? String {
+                if opponentJerseyColor == "black" {
+                    paleJerseyColor = false
+                    JerseyColor = UIColor.black
+                } else if opponentJerseyColor == "blue" {
+                    paleJerseyColor = false
+                    JerseyColor = UIColor.blue
+                } else if opponentJerseyColor == "red" {
+                    paleJerseyColor = false
+                    JerseyColor = UIColor.red
+                } else if opponentJerseyColor == "white" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.white
+                } else if opponentJerseyColor == "yellow" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.yellow
+                } else if opponentJerseyColor == "green" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.green
+                }
+            }
+        }
         
-    }
+        
+        if paleJerseyColor == true {
+            SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton3.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton4.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton5.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+        } else if paleJerseyColor == false {
+            SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            SubButton3.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            SubButton4.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            SubButton5.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+        }
+        
+        if paleJerseyColor == true {
+            
+        }
+        
+        if changedTeam == "T1" {
+            SubButton1.backgroundColor = JerseyColor
+            SubButton2.backgroundColor = JerseyColor
+            SubButton3.backgroundColor = JerseyColor
+            SubButton4.backgroundColor = JerseyColor
+            SubButton5.backgroundColor = JerseyColor
+            
+        } else if changedTeam == "T2" {
+            SubButton1.backgroundColor = JerseyColor
+            SubButton2.backgroundColor = JerseyColor
+            SubButton3.backgroundColor = JerseyColor
+            SubButton4.backgroundColor = JerseyColor
+            SubButton5.backgroundColor = JerseyColor
+        }
+        
+        
+    }*/
+
     
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
         if let lastStatMinute = lastStatMinuteObject as? String {

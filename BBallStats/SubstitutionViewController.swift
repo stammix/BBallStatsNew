@@ -63,46 +63,79 @@ class SubstitutionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Find out which Team changed Players
+        
         let teamOfChangingPlayerObject = UserDefaults.standard.object(forKey: "selectedTeam")
         if let teamOfChangingPlayer = teamOfChangingPlayerObject as? String {
             changedTeam = "\(teamOfChangingPlayer)"
         }
-    
+        //TeamColors
         if changedTeam == "T1" {
             let homeJerseyColorObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
             if let homeJerseyColor = homeJerseyColorObject as? String {
                 if homeJerseyColor == "black" {
+                    paleJerseyColor = false
                     JerseyColor = UIColor.black
                 } else if homeJerseyColor == "blue" {
+                    paleJerseyColor = false
                     JerseyColor = UIColor.blue
                 } else if homeJerseyColor == "red" {
+                    paleJerseyColor = false
                 JerseyColor = UIColor.red
+                } else if homeJerseyColor == "white" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.white
+                } else if homeJerseyColor == "yellow" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.yellow
+                } else if homeJerseyColor == "green" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.green
                 }
             }
             } else if changedTeam == "T2" {
             let opponentJerseyColorObject = UserDefaults.standard.object(forKey: "OpponentJerseyColor")
             if let opponentJerseyColor = opponentJerseyColorObject as? String {
                 if opponentJerseyColor == "black" {
+                    paleJerseyColor = false
                     JerseyColor = UIColor.black
                 } else if opponentJerseyColor == "blue" {
+                    paleJerseyColor = false
                     JerseyColor = UIColor.blue
                 } else if opponentJerseyColor == "red" {
+                    paleJerseyColor = false
                     JerseyColor = UIColor.red
+                } else if opponentJerseyColor == "white" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.white
+                } else if opponentJerseyColor == "yellow" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.yellow
+                } else if opponentJerseyColor == "green" {
+                    paleJerseyColor = true
+                    JerseyColor = UIColor.green
                 }
             }
         }
         
-          /*  _ = UserDefaults.standard.bool(forKey: "paleJerseyColor")
-            if UserDefaults.standard.bool(forKey: "paleJerseyColor"){
-                paleJerseyColor = true
-            } else {
-                paleJerseyColor = false
+        
+            if paleJerseyColor == true {
+                SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton3.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton4.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton5.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            } else if paleJerseyColor == false {
+                SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+                SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+                SubButton3.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+                SubButton4.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+                SubButton5.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             }
         
         if paleJerseyColor == true {
             
-        }*/
+        }
         
         if changedTeam == "T1" {
             SubButton1.backgroundColor = JerseyColor

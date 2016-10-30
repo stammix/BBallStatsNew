@@ -50,6 +50,22 @@ class InGameSettingsViewController: UIViewController {
         UserDefaults.standard.set("red", forKey: "HomeJerseyColor")
         UserDefaults.standard.set(true, forKey: "paleJerseyColor")
     }
+    @IBAction func HomeTeamWhite(_ sender: AnyObject) {
+        homeTeamColor = UIColor.white
+        UserDefaults.standard.set("white", forKey: "HomeJerseyColor")
+        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+    }
+    
+    @IBAction func HomeTeamYellow(_ sender: AnyObject) {
+        homeTeamColor = UIColor.yellow
+        UserDefaults.standard.set("yellow", forKey: "HomeJerseyColor")
+        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+    }
+    @IBAction func HomeTeamGreen(_ sender: AnyObject) {
+        homeTeamColor = UIColor.green
+        UserDefaults.standard.set("green", forKey: "HomeJerseyColor")
+        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
+    }
     
     @IBAction func OpponentTeamBlack(_ sender: UIButton) {
         opponentTeamColor = UIColor.black
@@ -57,15 +73,33 @@ class InGameSettingsViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "paleJerseyColor")
     }
     @IBAction func OpponentTeamBlue(_ sender: UIButton) {
+        opponentTeamColor = UIColor.blue
         UserDefaults.standard.set("blue", forKey: "OpponentJerseyColor")
         UserDefaults.standard.set(false, forKey: "paleJerseyColor")
-         opponentTeamColor = UIColor.blue
     }
     @IBAction func OpponentTeamRed(_ sender: UIButton) {
+        opponentTeamColor = UIColor.red
         UserDefaults.standard.set("red", forKey: "OpponentJerseyColor")
         UserDefaults.standard.set(false, forKey: "paleJerseyColor")
-         opponentTeamColor = UIColor.red
     }
+    @IBAction func OpponentTeamWhite(_ sender: AnyObject) {
+        opponentTeamColor = UIColor.white
+        UserDefaults.standard.set("white", forKey: "OpponentJerseyColor")
+        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+        
+    }
+    @IBAction func OpponentTeamYellow(_ sender: AnyObject) {
+        opponentTeamColor = UIColor.yellow
+        UserDefaults.standard.set("yellow", forKey: "OpponentJerseyColor")
+        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+    }
+    @IBAction func OpponentTeamGreen(_ sender: AnyObject) {
+        opponentTeamColor = UIColor.green
+        UserDefaults.standard.set("green", forKey: "OpponentJerseyColor")
+        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -76,12 +76,21 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksd-FI-mSn">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamWhite:" destination="bVl-uw-c16" eventType="touchUpInside" id="wso-pn-jf6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="657-Al-sa0">
                                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamYellow:" destination="bVl-uw-c16" eventType="touchUpInside" id="giP-pz-0ZQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7h-Bf-rpl">
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamGreen:" destination="bVl-uw-c16" eventType="touchUpInside" id="VII-6y-Ck6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -121,12 +130,21 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-vg-btH">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamWhite:" destination="bVl-uw-c16" eventType="touchUpInside" id="VlG-N2-aOQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZs-9d-43x">
                                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamYellow:" destination="bVl-uw-c16" eventType="touchUpInside" id="GHd-6o-59W"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-sz-QUP">
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamGreen:" destination="bVl-uw-c16" eventType="touchUpInside" id="Wor-WQ-yZS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1232,6 +1250,6 @@
         <image name="BballStatsJerseyWhite.png" width="419" height="666"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aPV-kE-8ZV"/>
+        <segue reference="ZcD-N2-Yvd"/>
     </inferredMetricsTieBreakers>
 </document>
