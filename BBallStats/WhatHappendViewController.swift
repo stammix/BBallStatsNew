@@ -125,18 +125,17 @@ class WhatHappendViewController: UIViewController {
     
     //actions
     @IBAction func twoPointerPressed(_ sender: UIButton) {
+        UserDefaults.standard.set("2Points", forKey: "action")
         print("2p")
-        currentScoreTeamOne = currentScoreTeamOne + 2
-        currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-        UserDefaults.standard.set("2 Points", forKey: "action")
+    //    currentScoreTeamOne = currentScoreTeamOne + 2
+    //    currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+        
         self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
     }
     
     @IBAction func threePointsPressed(_ sender: UIButton) {
         print("3p")
-        currentScoreTeamOne = currentScoreTeamOne + 3
-        currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-        UserDefaults.standard.set("3 Points", forKey: "action")
+        UserDefaults.standard.set("3Points", forKey: "action")
         self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
     }
     
@@ -144,9 +143,7 @@ class WhatHappendViewController: UIViewController {
     
     @IBAction func FTmadePressed(_ sender: UIButton) {
         print("FT made")
-        currentScoreTeamOne = currentScoreTeamOne + 1
-        currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-        UserDefaults.standard.set("FT made", forKey: "action")
+        UserDefaults.standard.set("FTmade", forKey: "action")
         self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
         
     }
@@ -227,5 +224,41 @@ class WhatHappendViewController: UIViewController {
             lastStatPlayerLabel.text = "\(lastStatPlayer)"
             //lastStatPlayerLabel.textColor = teamOneColor
         }
-    }
+  
+        let selectedTeamObject = UserDefaults.standard.object(forKey: "selectedTeam")
+        if let selectedTeam = selectedTeamObject as? String {
+            if selectedTeam == "T1" {
+                print("selected Team T1")
+                    let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
+                    if let lastStatAction = lastStatActionObject as? String {
+                        if lastStatAction == "2Points" {
+                            currentScoreTeamOne = currentScoreTeamOne + 2
+                            currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+                        } else if lastStatAction == "3Points" {
+                            currentScoreTeamOne = currentScoreTeamOne + 3
+                            currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+                        } else if lastStatAction == "FTmade" {
+                            currentScoreTeamOne = currentScoreTeamOne + 1
+                            currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+                        }
+                }
+       
+            } else if selectedTeam == "T2" {
+                print("selected Team T2")
+                let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
+                if let lastStatAction = lastStatActionObject as? String {
+                    if lastStatAction == "2Points" {
+                        currentScoreTeamTwo = currentScoreTeamTwo + 2
+                        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
+                    } else if lastStatAction == "3Points" {
+                        currentScoreTeamTwo = currentScoreTeamTwo + 3
+                        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
+                    } else if lastStatAction == "FTmade" {
+                        currentScoreTeamTwo = currentScoreTeamTwo + 1
+                        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
+                    }
+                }
+            }
+}
+}
 }
