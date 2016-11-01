@@ -717,6 +717,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Who made it?" id="6Jd-U2-4AY"/>
                     <connections>
+                        <outlet property="jersey10Button" destination="mIr-sF-cpB" id="CMC-Eb-BxF"/>
+                        <outlet property="jersey11Button" destination="IkO-RB-Rx2" id="cM4-vc-DTd"/>
+                        <outlet property="jersey12Button" destination="9yG-zE-GGy" id="uEa-aR-wLQ"/>
+                        <outlet property="jersey1Button" destination="f3o-8Y-27l" id="K3T-6i-HMw"/>
+                        <outlet property="jersey2Button" destination="hC4-rw-j42" id="NHO-SB-W8R"/>
+                        <outlet property="jersey3Button" destination="SXS-gm-hZZ" id="scW-hv-yV4"/>
+                        <outlet property="jersey4Button" destination="D5w-sX-Ybn" id="8T3-9Y-2iR"/>
+                        <outlet property="jersey5Button" destination="SlS-Ti-g5l" id="qDT-VR-lgM"/>
+                        <outlet property="jersey6Button" destination="rq0-di-enr" id="GLI-jN-PUV"/>
+                        <outlet property="jersey7Button" destination="1Xt-3W-L4c" id="zSz-4p-ziR"/>
+                        <outlet property="jersey8Button" destination="NXq-Jp-ogz" id="JVz-O2-y2L"/>
+                        <outlet property="jersey9Button" destination="aGv-wb-CTM" id="JFK-X2-16d"/>
                         <segue destination="CrG-TL-V9f" kind="show" identifier="WhoMadeItToSubstituionT1Segue" id="aPV-kE-8ZV"/>
                     </connections>
                 </viewController>
@@ -1236,6 +1248,30 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="T1Jersey10Button" destination="vQM-1e-cH7" id="cAa-Wi-Qq3"/>
+                        <outlet property="T1Jersey11Button" destination="3rd-Ne-Jhh" id="BGE-Pm-N3c"/>
+                        <outlet property="T1Jersey12Button" destination="Zxp-zf-5k5" id="P9z-No-XjQ"/>
+                        <outlet property="T1Jersey1Button" destination="72u-Zf-CQw" id="hyI-Id-jaP"/>
+                        <outlet property="T1Jersey2Button" destination="MHo-5g-dhV" id="r1R-Yb-dAy"/>
+                        <outlet property="T1Jersey3Button" destination="Oz6-EI-DUy" id="huX-1E-fd6"/>
+                        <outlet property="T1Jersey4Button" destination="D7I-dj-tul" id="otq-EO-Vkl"/>
+                        <outlet property="T1Jersey5Button" destination="FJ8-rH-hOD" id="F5Q-78-FRU"/>
+                        <outlet property="T1Jersey6Button" destination="HYa-KQ-pEX" id="QaY-mf-Qrc"/>
+                        <outlet property="T1Jersey7Button" destination="PPZ-8q-9w2" id="Hl4-Xt-eDU"/>
+                        <outlet property="T1Jersey8Button" destination="luB-pN-oQx" id="RxV-v5-WxP"/>
+                        <outlet property="T1Jersey9Button" destination="BMh-xR-2NV" id="m4E-qo-M82"/>
+                        <outlet property="T2Jersey10Button" destination="gNi-Ja-6jU" id="cus-4S-a8U"/>
+                        <outlet property="T2Jersey11Button" destination="QmI-se-zRb" id="Ilo-x0-iTz"/>
+                        <outlet property="T2Jersey12Button" destination="uFn-1S-bfd" id="fme-q4-n8P"/>
+                        <outlet property="T2Jersey1Button" destination="FGD-TZ-JyA" id="15K-sx-9Wt"/>
+                        <outlet property="T2Jersey2Button" destination="iw2-TB-5PX" id="j1e-NZ-kiv"/>
+                        <outlet property="T2Jersey3Button" destination="U0b-bp-4uu" id="ujP-9M-rI6"/>
+                        <outlet property="T2Jersey4Button" destination="AKs-WU-5bb" id="8hC-Ks-GRG"/>
+                        <outlet property="T2Jersey5Button" destination="v5N-DA-bly" id="Ix7-Hd-CkK"/>
+                        <outlet property="T2Jersey6Button" destination="knT-rG-wIR" id="k7J-W7-Dd2"/>
+                        <outlet property="T2Jersey7Button" destination="U2s-GO-qGD" id="VF4-Ed-Ucf"/>
+                        <outlet property="T2Jersey8Button" destination="sZo-Ck-Gmh" id="ynm-Ql-0Zu"/>
+                        <outlet property="T2Jersey9Button" destination="go6-6e-Z9e" id="rT8-g8-OVb"/>
                         <segue destination="CrG-TL-V9f" kind="show" identifier="BothTeamsToSubstitutionSegue" id="ZcD-N2-Yvd"/>
                     </connections>
                 </viewController>

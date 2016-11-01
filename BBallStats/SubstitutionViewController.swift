@@ -9,7 +9,7 @@
 import UIKit
 
 var changedPlayer = ""
-var changedTeam = ""
+var changedTeam = "T1"
 var paleJerseyColor = true
 var JerseyColor = UIColor.black
 
@@ -121,10 +121,15 @@ class SubstitutionViewController: UIViewController {
         
             if paleJerseyColor == true {
                 SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton1.setTitleColor(UIColor.black, for: .normal)
                 SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton2.setTitleColor(UIColor.black, for: .normal)
                 SubButton3.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton3.setTitleColor(UIColor.black, for: .normal)
                 SubButton4.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton4.setTitleColor(UIColor.black, for: .normal)
                 SubButton5.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+                SubButton5.setTitleColor(UIColor.black, for: .normal)
             } else if paleJerseyColor == false {
                 SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
                 SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
