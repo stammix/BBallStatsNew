@@ -196,7 +196,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYx-mx-Zc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="374"/>
+            <point key="canvasLocation" x="-323" y="334"/>
         </scene>
         <!--What happend?-->
         <scene sceneID="tne-QT-ifu">
@@ -497,11 +497,66 @@
                         <segue destination="mpX-o0-Jlg" kind="show" identifier="whatHappendToWhoMadeItSegue" id="8zL-XD-sr2"/>
                         <segue destination="VIb-Wt-BZ0" kind="show" identifier="whatHappendToWhoMadeBothTeamsSegue" id="P89-Kt-20Q"/>
                         <segue destination="bVl-uw-c16" kind="presentation" identifier="toInGameSettingsSegue" id="Qxu-aM-CDM"/>
+                        <segue destination="dPT-E9-Rxe" kind="show" identifier="breakSegue" id="2jL-Le-HeC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="341" y="374"/>
+        </scene>
+        <!--Break View Controller-->
+        <scene sceneID="lcE-vH-4kJ">
+            <objects>
+                <viewController id="dPT-E9-Rxe" customClass="BreakViewController" customModule="BBallStats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jdd-ER-ipd"/>
+                        <viewControllerLayoutGuide type="bottom" id="uQp-pe-xxq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gas-01-YXy">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RDv-dH-LYy">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-Fg-UCc">
+                                <state key="normal" title="Start next Quarter"/>
+                                <connections>
+                                    <action selector="nextQuarterButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="bgg-iz-7qu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarter Break" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-10-jEK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="YfV-Q3-aTe"/>
+                                    <constraint firstAttribute="height" constant="26" id="tnF-u4-AmA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sft-10-jEK" firstAttribute="centerY" secondItem="KV3-Fg-UCc" secondAttribute="centerY" id="3sb-GZ-v3x"/>
+                            <constraint firstItem="RDv-dH-LYy" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="15" id="O0P-Mn-RSg"/>
+                            <constraint firstItem="Sft-10-jEK" firstAttribute="centerX" secondItem="gas-01-YXy" secondAttribute="centerX" id="SDa-pS-5cL"/>
+                            <constraint firstItem="RDv-dH-LYy" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="97" id="WCk-JT-ary"/>
+                            <constraint firstItem="KV3-Fg-UCc" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="13" id="fSJ-nU-QCq"/>
+                            <constraint firstAttribute="bottom" secondItem="RDv-dH-LYy" secondAttribute="bottom" id="mpA-4a-X3V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RDv-dH-LYy" secondAttribute="trailing" constant="93" id="o7t-oM-9vY"/>
+                            <constraint firstItem="KV3-Fg-UCc" firstAttribute="trailing" secondItem="gas-01-YXy" secondAttribute="trailingMargin" id="xjD-WV-5mV"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dQW-jR-sOY"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbH-uw-N6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="1252"/>
         </scene>
         <!--Who made it?-->
         <scene sceneID="Pgv-tS-bx2">
@@ -1286,6 +1341,7 @@
         <image name="BballStatsJerseyWhite.png" width="419" height="666"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="gwz-x2-LZT"/>
         <segue reference="ZcD-N2-Yvd"/>
     </inferredMetricsTieBreakers>
 </document>

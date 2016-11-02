@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		860341861DB419A600BE4CB7 /* InGameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */; };
+		862D64961DCA922D007783F3 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D64951DCA922D007783F3 /* BreakViewController.swift */; };
 		864436471DAFF5E100C7C6D8 /* BballStatsJerseyBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436451DAFF5E100C7C6D8 /* BballStatsJerseyBlack.png */; };
 		864436481DAFF5E100C7C6D8 /* BballStatsJerseyWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436461DAFF5E100C7C6D8 /* BballStatsJerseyWhite.png */; };
 		8644364A1DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameSettingsViewController.swift; sourceTree = "<group>"; };
+		862D64951DCA922D007783F3 /* BreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		864436451DAFF5E100C7C6D8 /* BballStatsJerseyBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BballStatsJerseyBlack.png; path = ../BballStatsJerseyBlack.png; sourceTree = "<group>"; };
 		864436461DAFF5E100C7C6D8 /* BballStatsJerseyWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BballStatsJerseyWhite.png; path = ../BballStatsJerseyWhite.png; sourceTree = "<group>"; };
 		864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */,
 				869AAAE01DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift */,
 				869AAAE21DC5730200BA431A /* SubstitutionViewController.swift */,
+				862D64951DCA922D007783F3 /* BreakViewController.swift */,
 				869C84821DB0268E00E43075 /* Main.storyboard */,
 				86A0D83C1DAEDD7200DA3530 /* Assets.xcassets */,
 				86A0D83E1DAEDD7200DA3530 /* LaunchScreen.storyboard */,
@@ -290,6 +293,7 @@
 				869AAAE11DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift in Sources */,
 				86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */,
 				86A0D8331DAEDD7200DA3530 /* AppDelegate.swift in Sources */,
+				862D64961DCA922D007783F3 /* BreakViewController.swift in Sources */,
 				86BAC81C1DBB976900553CEA /* Settings.swift in Sources */,
 				869C84861DB02B6500E43075 /* BballStats.xcdatamodeld in Sources */,
 				860341861DB419A600BE4CB7 /* InGameSettingsViewController.swift in Sources */,

@@ -90,9 +90,21 @@ class WhatHappendViewController: UIViewController {
             currentMinutePlusOne = currentMinutePlusOne + 2
             currentMinutePlusTwo = currentMinutePlusTwo + 2
             updateLabels()
+        } else if currentMinute == GameTime - 1 {
+            self.performSegue(withIdentifier: "breakSegue", sender: self)
+        } else if currentMinute == GameTime {
+            self.performSegue(withIdentifier: "breakSegue", sender: self)
         }
     }
     
+    func resetMinuteLabels() {
+        currentMinute = 1
+        currentMinuteMinusTwo = -1
+        currentMinuteMinusOne = 0
+        currentMinutePlusOne = 2
+        currentMinutePlusTwo = 3
+    
+    }
     
     
     func updateLabels(){
@@ -114,7 +126,7 @@ class WhatHappendViewController: UIViewController {
         if currentMinutePlusTwo < GameTime + 1 {
             self.plusTwoMinutesLabel.text = "\(currentMinutePlusTwo)"
         } else {
-            self.plusTwoMinutesLabel.text = ""
+            self.plusTwoMinutesLabel.text = "Break"
         }
         
         UserDefaults.standard.set("\(currentMinute)", forKey: "minute")
@@ -180,18 +192,22 @@ class WhatHappendViewController: UIViewController {
         
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        UserDefaults.standard.set("1", forKey: "minute")
-        
-      
-    
+        currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        let resetGameTimeObject = UserDefaults.standard.object(forKey: "minute")
+        if let resetGameTime = resetGameTimeObject as? String {
+            if resetGameTime == "break" {
+                resetMinuteLabels()
+                updateLabels()
+            }
+        }
+        
         let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
         if let lastStatMinute = lastStatMinuteObject as? String {
             
@@ -219,11 +235,11 @@ class WhatHappendViewController: UIViewController {
             segueToWhoMade = "whatHappendToWhoMadeItSegue"
         }
         
-        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
-        if let lastStatPlayer = lastStatPlayerObject as? String {
-            lastStatPlayerLabel.text = "\(lastStatPlayer)"
-            //lastStatPlayerLabel.textColor = teamOneColor
-        }
+//        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
+//        if let lastStatPlayer = lastStatPlayerObject as? String {
+//            lastStatPlayerLabel.text = "\(lastStatPlayer)"
+//            //lastStatPlayerLabel.textColor = teamOneColor
+//        }
   
         let selectedTeamObject = UserDefaults.standard.object(forKey: "selectedTeam")
         if let selectedTeam = selectedTeamObject as? String {
@@ -241,8 +257,27 @@ class WhatHappendViewController: UIViewController {
                             currentScoreTeamOne = currentScoreTeamOne + 1
                             currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
                         }
+                        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
+                        if let lastStatPlayer = lastStatPlayerObject as? String {
+                            lastStatPlayerLabel.text = "\(lastStatPlayer)"
+                            let lastStatTeamColorObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
+                            if let lastStatTeamColor = lastStatTeamColorObject as? String {
+                                if lastStatTeamColor == "black" {
+                                    lastStatPlayerLabel.textColor = UIColor.black
+                                } else if lastStatTeamColor == "blue" {
+                                    lastStatPlayerLabel.textColor = UIColor.blue
+                                } else if lastStatTeamColor == "red" {
+                                    lastStatPlayerLabel.textColor = UIColor.red
+                                } else if lastStatTeamColor == "white" {
+                                    lastStatPlayerLabel.textColor = UIColor.white
+                                } else if lastStatTeamColor == "yellow" {
+                                    lastStatPlayerLabel.textColor = UIColor.yellow
+                                } else if lastStatTeamColor == "green" {
+                                    lastStatPlayerLabel.textColor = UIColor.green
+                                }
+                            }
+                        }
                 }
-       
             } else if selectedTeam == "T2" {
                 print("selected Team T2")
                 let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
@@ -257,8 +292,30 @@ class WhatHappendViewController: UIViewController {
                         currentScoreTeamTwo = currentScoreTeamTwo + 1
                         currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
                     }
+                    let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
+                    if let lastStatPlayer = lastStatPlayerObject as? String {
+                        lastStatPlayerLabel.text = "\(lastStatPlayer)"
+                        let lastStatTeamColorObject = UserDefaults.standard.object(forKey: "OpponentJerseyColor")
+                        if let lastStatTeamColor = lastStatTeamColorObject as? String {
+                            if lastStatTeamColor == "black" {
+                                lastStatPlayerLabel.textColor = UIColor.black
+                            } else if lastStatTeamColor == "blue" {
+                                lastStatPlayerLabel.textColor = UIColor.blue
+                            } else if lastStatTeamColor == "red" {
+                                lastStatPlayerLabel.textColor = UIColor.red
+                            } else if lastStatTeamColor == "white" {
+                                lastStatPlayerLabel.textColor = UIColor.white
+                            } else if lastStatTeamColor == "yellow" {
+                                lastStatPlayerLabel.textColor = UIColor.yellow
+                            } else if lastStatTeamColor == "green" {
+                                lastStatPlayerLabel.textColor = UIColor.green
+                            }
+                        }
+                    }
+                    
                 }
             }
-}
-}
+        }
+        
+    }
 }
