@@ -200,10 +200,13 @@ class WhatHappendViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
         let resetGameTimeObject = UserDefaults.standard.object(forKey: "minute")
         if let resetGameTime = resetGameTimeObject as? String {
             if resetGameTime == "break" {
                 resetMinuteLabels()
+                updateLabels()
+            } else {
                 updateLabels()
             }
         }
