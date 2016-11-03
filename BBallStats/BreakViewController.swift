@@ -12,6 +12,7 @@ class BreakViewController: UIViewController {
 
     @IBAction func nextQuarterButton(_ sender: AnyObject) {
         UserDefaults.standard.set("break", forKey: "minute")
+        UserDefaults.standard.set("break", forKey: "selectedTeam")
         performSegue(withIdentifier: "breakToGameSegue", sender: self)
     }
     override func viewDidLoad() {

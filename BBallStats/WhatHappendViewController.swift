@@ -17,6 +17,7 @@ var currentMinutePlusTwo = 3
 var GameTime = 10
 var currentScoreTeamOne = 0
 var currentScoreTeamTwo = 0
+var Period = 1
 var segueToWhoMade = "whatHappendToWhoMadeItSegue"
 
 class WhatHappendViewController: UIViewController {
@@ -46,6 +47,8 @@ class WhatHappendViewController: UIViewController {
     @IBOutlet weak var currentScoreTeamOneLabel: UILabel!
     
     @IBOutlet weak var currentScoreTeamTwoLabel: UILabel!
+    
+    @IBOutlet weak var periodLabel: UILabel!
     
     @IBAction func twoMinutesBackPressed(_ sender: UIButton) {
         if currentMinute > 2 {
@@ -201,6 +204,17 @@ class WhatHappendViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         
+        let resetGameObject = UserDefaults.standard.object(forKey: "action")
+        if let resetGame = resetGameObject as? String {
+        if resetGame == "resetGame" {
+            currentScoreTeamOne = 0
+            currentScoreTeamOneLabel.text = "0"
+            currentScoreTeamTwo = 0
+            currentScoreTeamTwoLabel.text = "0"
+            resetMinuteLabels()
+            updateLabels()
+            }
+        }
         let resetGameTimeObject = UserDefaults.standard.object(forKey: "minute")
         if let resetGameTime = resetGameTimeObject as? String {
             if resetGameTime == "break" {

@@ -17,6 +17,12 @@ class InGameSettingsViewController: UIViewController {
   
     @IBOutlet weak var SwitchState: UISwitch!
    
+    @IBAction func resetGameButton(_ sender: AnyObject) {
+        UserDefaults.standard.set("1", forKey: "minute")
+        UserDefaults.standard.set("1", forKey: "period")
+        UserDefaults.standard.set("resetGame", forKey: "action")
+        //deactivate LastStatTable
+    }
 
     @IBAction func tippOffButton(_ sender: AnyObject) {
         
