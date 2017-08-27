@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVl-uw-c16">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVl-uw-c16">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -431,8 +431,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Period 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sc-dH-WR7">
-                                <frame key="frameInset" minX="303" minY="132" width="62" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sc-dH-WR7">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="e55-4V-tNh"/>
                                     <constraint firstAttribute="width" constant="62" id="uXb-CW-8S0"/>
@@ -555,16 +554,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zusammenfassung Viertel 1" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-ib-62H">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="3ZT-MX-4Y3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Sft-10-jEK" firstAttribute="centerY" secondItem="KV3-Fg-UCc" secondAttribute="centerY" id="3sb-GZ-v3x"/>
+                            <constraint firstItem="Sft-10-jEK" firstAttribute="centerY" secondItem="KV3-Fg-UCc" secondAttribute="centerY" constant="43" id="3sb-GZ-v3x"/>
+                            <constraint firstItem="fEL-ib-62H" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" id="7HS-cv-6oA"/>
                             <constraint firstItem="RDv-dH-LYy" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="15" id="O0P-Mn-RSg"/>
                             <constraint firstItem="Sft-10-jEK" firstAttribute="centerX" secondItem="gas-01-YXy" secondAttribute="centerX" id="SDa-pS-5cL"/>
                             <constraint firstItem="RDv-dH-LYy" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="97" id="WCk-JT-ary"/>
+                            <constraint firstItem="fEL-ib-62H" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="79" id="evq-7I-lt3"/>
                             <constraint firstItem="KV3-Fg-UCc" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="13" id="fSJ-nU-QCq"/>
                             <constraint firstAttribute="bottom" secondItem="RDv-dH-LYy" secondAttribute="bottom" id="mpA-4a-X3V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RDv-dH-LYy" secondAttribute="trailing" constant="93" id="o7t-oM-9vY"/>
+                            <constraint firstItem="uQp-pe-xxq" firstAttribute="top" secondItem="fEL-ib-62H" secondAttribute="bottom" constant="174" id="uNx-iT-1FQ"/>
                             <constraint firstItem="KV3-Fg-UCc" firstAttribute="trailing" secondItem="gas-01-YXy" secondAttribute="trailingMargin" id="xjD-WV-5mV"/>
                         </constraints>
                     </view>
@@ -572,12 +582,15 @@
                     <navigationItem key="navigationItem" id="dQW-jR-sOY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
+                        <outlet property="nextPeriodButtonLabel" destination="KV3-Fg-UCc" id="f0m-81-qZQ"/>
+                        <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbH-uw-N6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="1252"/>
+            <point key="canvasLocation" x="339.58020989505252" y="1252"/>
         </scene>
         <!--Who made it?-->
         <scene sceneID="Pgv-tS-bx2">

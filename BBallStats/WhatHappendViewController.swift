@@ -15,6 +15,7 @@ var currentMinuteMinusOne = 0
 var currentMinutePlusOne = 2
 var currentMinutePlusTwo = 3
 var GameTime = 10
+var helpVar = GameTime - 1
 var currentScoreTeamOne = 0
 var currentScoreTeamTwo = 0
 var Period = 1
@@ -57,8 +58,9 @@ class WhatHappendViewController: UIViewController {
             currentMinuteMinusOne = currentMinuteMinusOne - 2
             currentMinutePlusOne = currentMinutePlusOne - 2
             currentMinutePlusTwo = currentMinutePlusTwo - 2
-            updateLabels()
         }
+        updateLabels()
+
     }
     
     
@@ -69,8 +71,8 @@ class WhatHappendViewController: UIViewController {
             currentMinuteMinusOne = currentMinuteMinusOne - 1
             currentMinutePlusOne = currentMinutePlusOne - 1
             currentMinutePlusTwo = currentMinutePlusTwo - 1
-            updateLabels()
         }
+        updateLabels()
     }
     
     
@@ -81,8 +83,8 @@ class WhatHappendViewController: UIViewController {
             currentMinuteMinusOne = currentMinuteMinusOne + 1
             currentMinutePlusOne = currentMinutePlusOne + 1
             currentMinutePlusTwo = currentMinutePlusTwo + 1
-            updateLabels()
         }
+        updateLabels()
     }
     
     @IBAction func skipTwoMinutesPressed(_ sender: UIButton) {
@@ -92,31 +94,53 @@ class WhatHappendViewController: UIViewController {
             currentMinuteMinusOne = currentMinuteMinusOne + 2
             currentMinutePlusOne = currentMinutePlusOne + 2
             currentMinutePlusTwo = currentMinutePlusTwo + 2
-            updateLabels()
         } else if currentMinute == GameTime - 1 {
             self.performSegue(withIdentifier: "breakSegue", sender: self)
         } else if currentMinute == GameTime {
             self.performSegue(withIdentifier: "breakSegue", sender: self)
         }
+        print(Period)
+        updateLabels()
     }
     
-    func resetMinuteLabels() {
-        currentMinute = 1
+    func resetMinutes() {
+                currentMinute = 1
         currentMinuteMinusTwo = -1
         currentMinuteMinusOne = 0
         currentMinutePlusOne = 2
         currentMinutePlusTwo = 3
+        updateLabels()
+    }
     
+    func refreshMinutes() {
+    let setCurrentMinuteObject = UserDefaults.standard.object(forKey: "period")
+    if let setCurrentMinute = setCurrentMinuteObject as? String {
+        if setCurrentMinute == "2" {
+            GameTime = GameTime+GameTime
+            currentMinute = 11
+        } else if setCurrentMinute == "3" {
+            GameTime = (GameTime/2)+GameTime
+            currentMinute = 21
+        } else if setCurrentMinute == "4" {
+            GameTime = (GameTime/3)*4
+            currentMinute = 31
+        }
+        }
+        currentMinuteMinusTwo = currentMinute-2
+        currentMinuteMinusOne = currentMinute-1
+        currentMinutePlusOne = currentMinute+1
+        currentMinutePlusTwo = currentMinute+2
+        updateLabels()
     }
     
     
     func updateLabels(){
         self.CurrentMinuteLabel.text = "\(currentMinute)"
-        if currentMinuteMinusTwo >= 1 {
+        if currentMinuteMinusTwo >= (GameTime-helpVar) {
             self.twoMinutesBackLabel.text = "\(currentMinuteMinusTwo)"
         } else {
             self.twoMinutesBackLabel.text = "" }
-        if currentMinuteMinusOne >= 1 {
+        if currentMinuteMinusOne >= (GameTime-helpVar) {
             self.lastMinuteLabel.text = "\(currentMinuteMinusOne)"
         } else {
             self.lastMinuteLabel.text = "" }
@@ -129,9 +153,13 @@ class WhatHappendViewController: UIViewController {
         if currentMinutePlusTwo < GameTime + 1 {
             self.plusTwoMinutesLabel.text = "\(currentMinutePlusTwo)"
         } else {
+            if currentScoreTeamOne == currentScoreTeamTwo {
+            self.plusTwoMinutesLabel.text = "OT"
+            } else {
             self.plusTwoMinutesLabel.text = "Break"
         }
-        
+    }
+        periodLabel.text = "Period \(Period)"
         UserDefaults.standard.set("\(currentMinute)", forKey: "minute")
         
         print("Minute \(currentMinute)")
@@ -200,9 +228,78 @@ class WhatHappendViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
         currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
+        //Period = 1
+       // UserDefaults.standard.set("1", forKey: "period")
+        print ("viewDidLoad")
+        
+        let setPeriodObject = UserDefaults.standard.object(forKey: "period")
+        if let setPeriod = setPeriodObject as? String {
+            if setPeriod == "1" {
+                Period = 1
+                periodLabel.text = "Period \(Period)"
+                UserDefaults.standard.set("1", forKey: "period")
+                currentMinute = 1
+                print ("Period \(Period)")
+            } else if setPeriod == "2" {
+                Period = 2
+                periodLabel.text = "Period \(Period)"
+                UserDefaults.standard.set("2", forKey: "period")
+                currentMinute = 11
+                print ("Period \(Period)")
+            } else if setPeriod == "3" {
+                Period = 3
+                periodLabel.text = "Period \(Period)"
+                UserDefaults.standard.set("3", forKey: "period")
+                currentMinute = 21
+                print ("Period \(Period)")
+            } else if setPeriod == "4" {
+                Period = 4
+                periodLabel.text = "Period \(Period)"
+                plusTwoMinutesLabel.text = "Finish"
+                UserDefaults.standard.set("4", forKey: "period")
+                currentMinute = 31
+                print("Period \(Period)")
+            }
+        }
+        refreshMinutes()
+        updateLabels()
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
+    
+      /*  let setPeriodObject = UserDefaults.standard.object(forKey: "period")
+        if let setPeriod = setPeriodObject as? String {
+            if setPeriod == "1" {
+                    Period = 1
+                    periodLabel.text = "Period \(Period)"
+                    UserDefaults.standard.set("1", forKey: "period")
+                    currentMinute = 1
+                    print ("Period \(Period)")
+            } else if setPeriod == "2" {
+                    Period = 2
+                    periodLabel.text = "Period \(Period)"
+                    UserDefaults.standard.set("2", forKey: "period")
+                    currentMinute = 11
+                    print ("Period \(Period)")
+            } else if setPeriod == "3" {
+                    Period = 3
+                    periodLabel.text = "Period \(Period)"
+                    UserDefaults.standard.set("3", forKey: "period")
+                    currentMinute = 21
+                    print ("Period \(Period)")
+            } else if setPeriod == "4" {
+                    Period = 4
+                    periodLabel.text = "Period \(Period)"
+                    plusTwoMinutesLabel.text = "Finish"
+                    UserDefaults.standard.set("4", forKey: "period")
+                    currentMinute = 31
+                    print("Period \(Period)")
+            }
+                refreshMinutes()
+                print ("test1")
+                updateLabels()
+        } */
         
         let resetGameObject = UserDefaults.standard.object(forKey: "action")
         if let resetGame = resetGameObject as? String {
@@ -211,17 +308,10 @@ class WhatHappendViewController: UIViewController {
             currentScoreTeamOneLabel.text = "0"
             currentScoreTeamTwo = 0
             currentScoreTeamTwoLabel.text = "0"
-            resetMinuteLabels()
+            GameTime = 10
+            Period = 1
+            resetMinutes()
             updateLabels()
-            }
-        }
-        let resetGameTimeObject = UserDefaults.standard.object(forKey: "minute")
-        if let resetGameTime = resetGameTimeObject as? String {
-            if resetGameTime == "break" {
-                resetMinuteLabels()
-                updateLabels()
-            } else {
-                updateLabels()
             }
         }
         
@@ -333,6 +423,6 @@ class WhatHappendViewController: UIViewController {
                 }
             }
         }
-        
+        updateLabels()
     }
 }
