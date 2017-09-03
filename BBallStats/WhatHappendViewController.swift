@@ -172,7 +172,7 @@ class WhatHappendViewController: UIViewController {
         print("2p")
     //    currentScoreTeamOne = currentScoreTeamOne + 2
     //    currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-        
+
         self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
     }
     

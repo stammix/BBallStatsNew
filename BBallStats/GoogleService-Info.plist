@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>526958941738-38ohd7egpg7gebjogpm4evqc48jttaas.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.526958941738-38ohd7egpg7gebjogpm4evqc48jttaas</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCRsBXRi9bTx9G8oJkdUHV3rFAVUAVS0i4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>526958941738</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>de.bballstats.BBallStats</string>
+	<key>PROJECT_ID</key>
+	<string>bballstats-88b0e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bballstats-88b0e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:526958941738:ios:d1b40e26e687163d</string>
+	<key>DATABASE_URL</key>
+	<string>https://bballstats-88b0e.firebaseio.com</string>
+</dict>
+</plist>
