@@ -12,6 +12,8 @@ import CoreData
 class WhoMadeItViewController: UIViewController {
     
     var JerseyColor = UIColor.white
+    var tappedAction = "NO ACTION"
+    var actualMinute = 1
     
   
     @IBOutlet weak var jersey1Button: UIButton!
@@ -187,67 +189,7 @@ class WhoMadeItViewController: UIViewController {
         jersey11Button.backgroundColor = JerseyColor
         jersey12Button.backgroundColor = JerseyColor
 
-        }
-
-    
-  /* @IBAction func save(_ sender: AnyObject) {
-     
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate // UIApplication.shared().delegate as! AppDelegate is now UIApplication.shared.delegate as! AppDelegate
-     
-        let context = appDelegate.persistentContainer.viewContext
-     
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
-     
-        newUser.setValue("kirsten", forKey: "username")
-        newUser.setValue("myPass", forKey: "password")
-        newUser.setValue(35, forKey: "age")
-     
-        do {
-     
-            try context.save()
-     
-            print("Saved")
-     
-        } catch {
-     
-            print("There was an error")
-            
-        }
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
-        
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            
-            let results = try context.fetch(request)
-            
-            if results.count > 0 {
-                
-                for result in results as! [NSManagedObject] {
-                    
-                    if let username = result.value(forKey: "username") as? String {
-                        
-                        print(username)
-                        
-                    }
-                    
-                }
-                
-                
-            } else {
-                
-                print("No results")
-                
-            }
-            
-            
-        } catch {
-            
-            print("Couldn't fetch results")
-            
-        }
-     }
- */
+        print("There was a \(tappedAction) in the \(actualMinute). Minute")
+    }
     
 }

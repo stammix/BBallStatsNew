@@ -13,6 +13,10 @@ class InGameSettingsViewController: UIViewController {
  //   var collectForBothTeams = false
     var homeTeamColor = UIColor.white
     var opponentTeamColor = UIColor.black
+    var Period = 1
+    var Minute = 1
+    var homeTeamScore = 0
+    var guestTeamScore = 0
     
   
     @IBOutlet weak var SwitchState: UISwitch!

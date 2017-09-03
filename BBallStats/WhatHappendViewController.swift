@@ -20,6 +20,9 @@ var currentScoreTeamOne = 0
 var currentScoreTeamTwo = 0
 var Period = 1
 var segueToWhoMade = "whatHappendToWhoMadeItSegue"
+var tappedAction = "2pointer"
+var homeTeamScore = 0
+
 
 class WhatHappendViewController: UIViewController {
     
@@ -113,19 +116,17 @@ class WhatHappendViewController: UIViewController {
     }
     
     func refreshMinutes() {
-    let setCurrentMinuteObject = UserDefaults.standard.object(forKey: "period")
-    if let setCurrentMinute = setCurrentMinuteObject as? String {
-        if setCurrentMinute == "2" {
+        if Period == 2 {
             GameTime = GameTime+GameTime
             currentMinute = 11
-        } else if setCurrentMinute == "3" {
+        } else if Period == 3 {
             GameTime = (GameTime/2)+GameTime
             currentMinute = 21
-        } else if setCurrentMinute == "4" {
+        } else if Period == 4 {
             GameTime = (GameTime/3)*4
             currentMinute = 31
         }
-        }
+
         currentMinuteMinusTwo = currentMinute-2
         currentMinuteMinusOne = currentMinute-1
         currentMinutePlusOne = currentMinute+1
@@ -168,59 +169,56 @@ class WhatHappendViewController: UIViewController {
     
     //actions
     @IBAction func twoPointerPressed(_ sender: UIButton) {
-        UserDefaults.standard.set("2Points", forKey: "action")
-        print("2p")
-    //    currentScoreTeamOne = currentScoreTeamOne + 2
-    //    currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
+        tappedAction = "2pointer"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
     }
     
     @IBAction func threePointsPressed(_ sender: UIButton) {
-        print("3p")
-        UserDefaults.standard.set("3Points", forKey: "action")
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
+        tappedAction = "3pointer"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
     }
     
-    
-    
     @IBAction func FTmadePressed(_ sender: UIButton) {
-        print("FT made")
-        UserDefaults.standard.set("FTmade", forKey: "action")
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
+        tappedAction = "madeFreeThrow"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
         
     }
     
     @IBAction func FTmissedPressed(_ sender: UIButton) {
-        print("FT missed")
-        UserDefaults.standard.set("FT missed", forKey: "action")
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
+        tappedAction = "missedFreeThrow"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
         
     }
     
     @IBAction func FoulPressed(_ sender: UIButton) {
-        print("Foul")
-        UserDefaults.standard.set("Foul", forKey: "action")
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
+        tappedAction = "Foul"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
     }
     
     @IBAction func TOPressed(_ sender: UIButton) {
-        print("TurnOver")
-        UserDefaults.standard.set("TO", forKey: "action")
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
+        tappedAction = "Turnover"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
     }
     
     @IBAction func StealPressed(_ sender: UIButton) {
-        print("Steal")
-        UserDefaults.standard.set("Steal", forKey: "action")
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
+        tappedAction = "Steal"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
         
     }
     @IBAction func TimeOutPressed(_ sender: UIButton) {
-        print("TimeOut")
-        UserDefaults.standard.set("TO", forKey: "action")
-        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: self)
-        
+        tappedAction = "TimeOut"
+        self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "whatHappendToWhoMadeItSegue" {
+        let whoVC = segue.destination as! WhoMadeItViewController
+        whoVC.tappedAction = sender as! String
+        whoVC.actualMinute = currentMinute
+        } else if segue.identifier == "breakSegue" {
+        let breakVC = segue.destination as! BreakViewController
+        breakVC.Period = Period
+        }
     }
     
     override func viewDidLoad() {
@@ -232,7 +230,7 @@ class WhatHappendViewController: UIViewController {
        // UserDefaults.standard.set("1", forKey: "period")
         print ("viewDidLoad")
         
-        let setPeriodObject = UserDefaults.standard.object(forKey: "period")
+   /*     let setPeriodObject = UserDefaults.standard.object(forKey: "period")
         if let setPeriod = setPeriodObject as? String {
             if setPeriod == "1" {
                 Period = 1
@@ -260,7 +258,7 @@ class WhatHappendViewController: UIViewController {
                 currentMinute = 31
                 print("Period \(Period)")
             }
-        }
+        } */
         refreshMinutes()
         updateLabels()
     }

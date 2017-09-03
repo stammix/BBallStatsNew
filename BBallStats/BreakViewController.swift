@@ -9,6 +9,8 @@
 import UIKit
 
 class BreakViewController: UIViewController {
+    
+    var Period = 1
 
    
     @IBOutlet weak var QuarterBreakTitleLabel: UILabel!
@@ -16,41 +18,42 @@ class BreakViewController: UIViewController {
     @IBOutlet weak var summaryLabel: UILabel!
     
     @IBAction func nextQuarterButton(_ sender: AnyObject) {
-      //  UserDefaults.standard.set("break", forKey: "minute")
-        UserDefaults.standard.set("break", forKey: "selectedTeam")
+        if Period >= 4 {
+        Period = Period + 1
+            performSegue(withIdentifier: "breakToGameSegue", sender: self)
+        } else {
         performSegue(withIdentifier: "breakToGameSegue", sender: self)
+        }
+      //  UserDefaults.standard.set("break", forKey: "minute")
+      //  UserDefaults.standard.set("break", forKey: "selectedTeam")
+        
     }
+/*   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let whatVC = segue.destination as! WhatHappendViewController
+         whatVC.Period = Period
+   } */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("now its the \(Period) period")
         // Do any additional setup after loading the view.
     }
         override func viewWillAppear(_ animated: Bool) {
-    let lastPeriodObject = UserDefaults.standard.object(forKey: "period")
-    if let lastPeriod = lastPeriodObject as? String {
-        if lastPeriod == "1" {
+        if Period == 1 {
             print("Break after Period 1")
             summaryLabel.text = "Summary Quarter 1"
-            UserDefaults.standard.set("2", forKey: "period")
-            UserDefaults.standard.set("10", forKey: "currentMinute")
-        } else if lastPeriod == "2" {
+        } else if Period == 2 {
             print("Break after Period 2")
             summaryLabel.text = "Summary Quarter 2"
-            UserDefaults.standard.set("3", forKey: "period")
-            UserDefaults.standard.set("20", forKey: "currentMinute")
-        } else if lastPeriod == "3" {
+        } else if Period == 3 {
             print("Break after Period 3")
             summaryLabel.text = "Summary Quarter 3"
-            UserDefaults.standard.set("4", forKey: "period")
-            UserDefaults.standard.set("30", forKey: "minute")
-        } else if lastPeriod == "4" {
+        } else if Period == 4 {
             print("Break after Period 4")
             summaryLabel.text = "Summary Quarter 4"
             QuarterBreakTitleLabel.text = "Game Summary"
             nextPeriodButtonLabel.setTitle("Save GameStats and upload", for: .normal)
-            UserDefaults.standard.set("resetGame", forKey: "action")
         }
     }
-}
 }
