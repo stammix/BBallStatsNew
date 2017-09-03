@@ -9,25 +9,33 @@
 import UIKit
 import CoreData
 
-var currentMinute = 1
-var currentMinuteMinusTwo = -1
-var currentMinuteMinusOne = 0
-var currentMinutePlusOne = 2
-var currentMinutePlusTwo = 3
-var GameTime = 10
-var helpVar = GameTime - 1
-var currentScoreTeamOne = 0
-var currentScoreTeamTwo = 0
-var Period = 1
-var segueToWhoMade = "whatHappendToWhoMadeItSegue"
-var tappedAction = "2pointer"
-var homeTeamScore = 0
+ var GameTime = 10
 
 
 class WhatHappendViewController: UIViewController {
+
+    var homeTeamColor = UIColor()
+    var guestTeamColor = UIColor()
+    var homeColorPale = false
+    var guestColorPale = true
+    var currentMinute = 1
+    var currentMinuteMinusTwo = -1
+    var currentMinuteMinusOne = 0
+    var currentMinutePlusOne = 2
+    var currentMinutePlusTwo = 3
+    var helpVar = GameTime - 1
+    var currentScoreTeamOne = 0
+    var currentScoreTeamTwo = 0
+    var Period = 1
+    var segueToWhoMade = "whatHappendToWhoMadeItSegue"
+    var tappedAction = "2pointer"
+    var homeTeamScore = 0
+    var collectStatsForBothTeams = 1
+    var substitution = 0
+    var gonePlayer = 1
+    var newPlayer = 6
     
-    //GameTime
-   
+    
     @IBAction func backToSettingsButton(_ sender: AnyObject) {
         performSegue(withIdentifier: "toInGameSettingsSegue", sender: nil)
     }
@@ -137,7 +145,7 @@ class WhatHappendViewController: UIViewController {
     
     func updateLabels(){
         self.CurrentMinuteLabel.text = "\(currentMinute)"
-        if currentMinuteMinusTwo >= (GameTime-helpVar) {
+       if currentMinuteMinusTwo >= (GameTime-helpVar) {
             self.twoMinutesBackLabel.text = "\(currentMinuteMinusTwo)"
         } else {
             self.twoMinutesBackLabel.text = "" }
@@ -215,6 +223,13 @@ class WhatHappendViewController: UIViewController {
         let whoVC = segue.destination as! WhoMadeItViewController
         whoVC.tappedAction = sender as! String
         whoVC.actualMinute = currentMinute
+        whoVC.homeTeamColor = homeTeamColor
+        } else if segue.identifier == "whatHappendToWhoMadeBothTeamsSegue" {
+        let whoVC = segue.destination as! WhoMadeItBothTeamsViewController
+        whoVC.tappedAction = sender as! String
+        whoVC.actualMinute = currentMinute
+        whoVC.homeTeamColor = homeTeamColor
+        whoVC.guestTeamColor = guestTeamColor
         } else if segue.identifier == "breakSegue" {
         let breakVC = segue.destination as! BreakViewController
         breakVC.Period = Period
@@ -228,7 +243,6 @@ class WhatHappendViewController: UIViewController {
         currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
         //Period = 1
        // UserDefaults.standard.set("1", forKey: "period")
-        print ("viewDidLoad")
         
    /*     let setPeriodObject = UserDefaults.standard.object(forKey: "period")
         if let setPeriod = setPeriodObject as? String {
@@ -264,7 +278,7 @@ class WhatHappendViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear")
+        print ("Es werden \(collectStatsForBothTeams) Teams angezeigt")
     
       /*  let setPeriodObject = UserDefaults.standard.object(forKey: "period")
         if let setPeriod = setPeriodObject as? String {
@@ -333,8 +347,7 @@ class WhatHappendViewController: UIViewController {
             }
             
         }
-        _ = UserDefaults.standard.bool(forKey: "OneOrBothTeams")
-        if UserDefaults.standard.bool(forKey: "OneOrBothTeams"){
+            if collectStatsForBothTeams == 2 {
             segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
         } else {
             segueToWhoMade = "whatHappendToWhoMadeItSegue"
@@ -346,7 +359,7 @@ class WhatHappendViewController: UIViewController {
 //            //lastStatPlayerLabel.textColor = teamOneColor
 //        }
   
-        let selectedTeamObject = UserDefaults.standard.object(forKey: "selectedTeam")
+     /*   let selectedTeamObject = UserDefaults.standard.object(forKey: "selectedTeam")
         if let selectedTeam = selectedTeamObject as? String {
             if selectedTeam == "T1" {
                 print("selected Team T1")
@@ -420,7 +433,7 @@ class WhatHappendViewController: UIViewController {
                     
                 }
             }
-        }
+        }*/
         updateLabels()
     }
 }

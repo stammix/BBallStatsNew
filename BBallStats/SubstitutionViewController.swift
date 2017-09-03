@@ -8,12 +8,19 @@
 
 import UIKit
 
-var changedPlayer = ""
-var changedTeam = "T1"
-var paleJerseyColor = true
-var JerseyColor = UIColor.black
+
 
 class SubstitutionViewController: UIViewController {
+    
+    var gonePlayer = 1
+    var newPlayer = 6
+    var changingTeam = 1
+    var paleJerseyColor = true
+    var homeTeamColor = UIColor()
+    var guestTeamColor = UIColor()
+   // var JerseyColor = UIColor.black
+    var actualMinute = 1
+    var substution = 0
     
     @IBOutlet weak var SubButton1: UIButton!
     @IBOutlet weak var SubButton2: UIButton!
@@ -23,54 +30,49 @@ class SubstitutionViewController: UIViewController {
     
     
     @IBAction func SubForP1(_ sender: UIButton) {
-        changedPlayer = "P1"
-        UserDefaults.standard.set("\(changedTeam)", forKey: "changedTeam")
-        UserDefaults.standard.set("\(changedPlayer)", forKey: "exchangedPlayer")
-        print("Sub for \(changedPlayer) of \(changedTeam)")
+        gonePlayer = 1
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func SubForP2(_ sender: UIButton) {
-        changedPlayer = "P2"
-        UserDefaults.standard.set("\(changedTeam)", forKey: "changedTeam")
-        UserDefaults.standard.set("\(changedPlayer)", forKey: "exchangedPlayer")
-        print("Sub for \(changedPlayer) of \(changedTeam)")
+        gonePlayer = 2
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func SubForP3(_ sender: UIButton) {
-        changedPlayer = "P3"
-        UserDefaults.standard.set("\(changedTeam)", forKey: "changedTeam")
-        UserDefaults.standard.set("\(changedPlayer)", forKey: "exchangedPlayer")
-        print("Sub for \(changedPlayer) of \(changedTeam)")
+        gonePlayer = 3
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func SubForP4(_ sender: UIButton) {
-        changedPlayer = "P4"
-        UserDefaults.standard.set("\(changedTeam)", forKey: "changedTeam")
-        UserDefaults.standard.set("\(changedPlayer)", forKey: "exchangedPlayer")
-        print("Sub for \(changedPlayer) of \(changedTeam)")
+        gonePlayer = 4
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func SubForP5(_ sender: UIButton) {
-        changedPlayer = "P5"
-        UserDefaults.standard.set("\(changedTeam)", forKey: "changedTeam")
-        UserDefaults.standard.set("\(changedPlayer)", forKey: "exchangedPlayer")
-        print("Sub for \(changedPlayer) of \(changedTeam)")
+        gonePlayer = 5
         let _ = navigationController?.popToRootViewController(animated: true)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Find out which Team changed Players
         
-        let teamOfChangingPlayerObject = UserDefaults.standard.object(forKey: "selectedTeam")
-        if let teamOfChangingPlayer = teamOfChangingPlayerObject as? String {
-            changedTeam = "\(teamOfChangingPlayer)"
-        }
-        //TeamColors
-        if changedTeam == "T1" {
+  /*     if changingTeam == 1 {
+            SubButton1.backgroundColor = homeTeamColor
+            SubButton2.backgroundColor = homeTeamColor
+            SubButton3.backgroundColor = homeTeamColor
+            SubButton4.backgroundColor = homeTeamColor
+            SubButton5.backgroundColor = homeTeamColor
+        } else if changingTeam == 2 {
+            SubButton1.backgroundColor = guestTeamColor
+            SubButton2.backgroundColor = guestTeamColor
+            SubButton3.backgroundColor = guestTeamColor
+            SubButton4.backgroundColor = guestTeamColor
+            SubButton5.backgroundColor = guestTeamColor
+            
+        } */
+        
+        
+  /*      //TeamColors
+        if changingTeam == 2 {
             let homeJerseyColorObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
             if let homeJerseyColor = homeJerseyColorObject as? String {
                 if homeJerseyColor == "black" {
@@ -93,7 +95,7 @@ class SubstitutionViewController: UIViewController {
                     JerseyColor = UIColor.green
                 }
             }
-            } else if changedTeam == "T2" {
+            } else if changingTeam == 2 {
             let opponentJerseyColorObject = UserDefaults.standard.object(forKey: "OpponentJerseyColor")
             if let opponentJerseyColor = opponentJerseyColorObject as? String {
                 if opponentJerseyColor == "black" {
@@ -142,22 +144,26 @@ class SubstitutionViewController: UIViewController {
             
         }
         
-        if changedTeam == "T1" {
+        if changingTeam == 1 {
             SubButton1.backgroundColor = JerseyColor
             SubButton2.backgroundColor = JerseyColor
             SubButton3.backgroundColor = JerseyColor
             SubButton4.backgroundColor = JerseyColor
             SubButton5.backgroundColor = JerseyColor
         
-       } else if changedTeam == "T2" {
+       } else if changingTeam == 2 {
             SubButton1.backgroundColor = JerseyColor
             SubButton2.backgroundColor = JerseyColor
             SubButton3.backgroundColor = JerseyColor
             SubButton4.backgroundColor = JerseyColor
             SubButton5.backgroundColor = JerseyColor
             }
+     */
         
-        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let statVC = segue.destination as! WhatHappendViewController
+        statVC.newPlayer = newPlayer
     }
 
 }

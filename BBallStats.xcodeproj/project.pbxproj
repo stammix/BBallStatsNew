@@ -26,7 +26,6 @@
 		86A0D84B1DAEDD7200DA3530 /* BBallStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D84A1DAEDD7200DA3530 /* BBallStatsTests.swift */; };
 		86A0D8561DAEDD7200DA3530 /* BBallStatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */; };
 		86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */; };
-		86BAC81C1DBB976900553CEA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BAC81B1DBB976900553CEA /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +73,6 @@
 		86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallStatsUITests.swift; sourceTree = "<group>"; };
 		86A0D8571DAEDD7200DA3530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
-		86BAC81B1DBB976900553CEA /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B084269426C2B7F057892C7D /* Pods_BBallStatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBallStatsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B278C1C5AB9CDD4C30526D70 /* Pods-BBallStatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBallStatsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBallStatsUITests/Pods-BBallStatsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C92592535A3EAC8E20CC912C /* Pods-BBallStatsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBallStatsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBallStatsUITests/Pods-BBallStatsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			children = (
 				86A0D8321DAEDD7200DA3530 /* AppDelegate.swift */,
 				860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */,
-				86BAC81B1DBB976900553CEA /* Settings.swift */,
 				86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */,
 				864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */,
 				869AAAE01DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift */,
@@ -361,9 +358,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BBallStatsTests/Pods-BBallStatsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NKOColorPickerView/NKOColorPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NKOColorPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -417,9 +425,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BBallStatsUITests/Pods-BBallStatsUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NKOColorPickerView/NKOColorPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NKOColorPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -505,7 +524,6 @@
 				86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */,
 				86A0D8331DAEDD7200DA3530 /* AppDelegate.swift in Sources */,
 				862D64961DCA922D007783F3 /* BreakViewController.swift in Sources */,
-				86BAC81C1DBB976900553CEA /* Settings.swift in Sources */,
 				869C84861DB02B6500E43075 /* BballStats.xcdatamodeld in Sources */,
 				860341861DB419A600BE4CB7 /* InGameSettingsViewController.swift in Sources */,
 			);

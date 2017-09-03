@@ -13,102 +13,99 @@ class InGameSettingsViewController: UIViewController {
  //   var collectForBothTeams = false
     var homeTeamColor = UIColor.white
     var opponentTeamColor = UIColor.black
+    var homeColorPale = true
     var Period = 1
     var Minute = 1
     var homeTeamScore = 0
     var guestTeamScore = 0
+    var collectStatsForBothTeams = 1
     
   
-    @IBOutlet weak var SwitchState: UISwitch!
+
+    @IBAction func collectBothSwitch(_ sender: UISwitch) {
+        if collectStatsForBothTeams == 1 {
+            collectStatsForBothTeams = 2
+        } else if collectStatsForBothTeams == 2 {
+            collectStatsForBothTeams = 1
+        }
+    }
    
     @IBAction func resetGameButton(_ sender: AnyObject) {
-        UserDefaults.standard.set("1", forKey: "minute")
-        UserDefaults.standard.set("1", forKey: "period")
-        UserDefaults.standard.set("resetGame", forKey: "action")
-        //deactivate LastStatTable
+        Period = 1
+        Minute = 1
+        homeTeamScore = 0
+        guestTeamScore = 0
     }
 
     @IBAction func tippOffButton(_ sender: AnyObject) {
-        
-        let settings = Settings()
-            settings.statsForBoth = SwitchState.isOn
-        
-            if SwitchState.isOn {
-                UserDefaults.standard.set(true, forKey: "OneOrBothTeams")
-            } else {
-                UserDefaults.standard.set(false, forKey: "OneOrBothTeams")
-            }
-
-        UserDefaults.standard.set("\(homeTeamColor)", forKey: "homeTeamColor")
-        UserDefaults.standard.set("\(opponentTeamColor)", forKey: "opponentTeamColor")
          self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
     }
     
     @IBAction func HomeTeamBlack(_ sender: AnyObject) {
         homeTeamColor = UIColor.black
-        UserDefaults.standard.set("black", forKey: "HomeJerseyColor")
-        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
+        homeColorPale = false
     }
     @IBAction func HomeTeamBlue(_ sender: AnyObject) {
         homeTeamColor = UIColor.blue
-        UserDefaults.standard.set("blue", forKey: "HomeJerseyColor")
-        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
+        homeColorPale = false
     }
     
     @IBAction func HomeTeamRed(_ sender: AnyObject) {
         homeTeamColor = UIColor.red
-        UserDefaults.standard.set("red", forKey: "HomeJerseyColor")
-        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+        homeColorPale = true
     }
     @IBAction func HomeTeamWhite(_ sender: AnyObject) {
         homeTeamColor = UIColor.white
-        UserDefaults.standard.set("white", forKey: "HomeJerseyColor")
-        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+        homeColorPale = true
     }
     
     @IBAction func HomeTeamYellow(_ sender: AnyObject) {
         homeTeamColor = UIColor.yellow
-        UserDefaults.standard.set("yellow", forKey: "HomeJerseyColor")
-        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+        homeColorPale = true
     }
     @IBAction func HomeTeamGreen(_ sender: AnyObject) {
         homeTeamColor = UIColor.green
-        UserDefaults.standard.set("green", forKey: "HomeJerseyColor")
-        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
+        homeColorPale = false
     }
     
     @IBAction func OpponentTeamBlack(_ sender: UIButton) {
         opponentTeamColor = UIColor.black
-        UserDefaults.standard.set("black", forKey: "OpponentJerseyColor")
-        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
+        homeColorPale = false
     }
     @IBAction func OpponentTeamBlue(_ sender: UIButton) {
         opponentTeamColor = UIColor.blue
-        UserDefaults.standard.set("blue", forKey: "OpponentJerseyColor")
-        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
+        homeColorPale = false
     }
     @IBAction func OpponentTeamRed(_ sender: UIButton) {
         opponentTeamColor = UIColor.red
-        UserDefaults.standard.set("red", forKey: "OpponentJerseyColor")
-        UserDefaults.standard.set(false, forKey: "paleJerseyColor")
+        homeColorPale = false
     }
     @IBAction func OpponentTeamWhite(_ sender: AnyObject) {
         opponentTeamColor = UIColor.white
-        UserDefaults.standard.set("white", forKey: "OpponentJerseyColor")
-        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+        homeColorPale = true
         
     }
     @IBAction func OpponentTeamYellow(_ sender: AnyObject) {
         opponentTeamColor = UIColor.yellow
-        UserDefaults.standard.set("yellow", forKey: "OpponentJerseyColor")
-        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+        homeColorPale = true
     }
     @IBAction func OpponentTeamGreen(_ sender: AnyObject) {
         opponentTeamColor = UIColor.green
-        UserDefaults.standard.set("green", forKey: "OpponentJerseyColor")
-        UserDefaults.standard.set(true, forKey: "paleJerseyColor")
+        homeColorPale = true
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let NVC = segue.destination as! UINavigationController
+        let whatVC = NVC.topViewController as! WhatHappendViewController
+        whatVC.homeTeamColor = homeTeamColor
+        whatVC.guestTeamColor = opponentTeamColor
+        whatVC.homeColorPale = false
+        whatVC.guestColorPale = true
+        whatVC.Period = Period
+        whatVC.currentMinute = Minute
+        whatVC.currentScoreTeamOne = homeTeamScore
+        whatVC.currentScoreTeamTwo = guestTeamScore
+        whatVC.collectStatsForBothTeams = collectStatsForBothTeams
+    }
     
     
     override func viewDidLoad() {

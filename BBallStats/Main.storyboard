@@ -47,6 +47,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-6a-7Pj">
                                 <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="collectBothSwitch:" destination="bVl-uw-c16" eventType="valueChanged" id="icf-h5-ZEh"/>
+                                </connections>
                             </switch>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-dZ-zBH">
                                 <subviews>
@@ -182,7 +185,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="SwitchState" destination="jzY-6a-7Pj" id="UNM-2v-nwb"/>
                         <segue destination="GOF-hA-dd3" kind="show" identifier="SettingsToGameSegue" id="5cg-4I-PrN"/>
                     </connections>
                 </viewController>

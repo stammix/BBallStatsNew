@@ -10,10 +10,12 @@ import UIKit
 
 class WhoMadeItBothTeamsViewController: UIViewController {
     
-    var homeJerseyColor = UIColor.white
-    var opponentJerseyColor = UIColor.black
+    var homeTeamColor = UIColor.white
+    var guestTeamColor = UIColor.black
     var homePaleJerseyColor = true
     var opponentPaleJerseyColor = false
+    var tappedAction = "2pointer"
+    var actualMinute = 1
     
     
     @IBOutlet weak var T1Jersey1Button: UIButton!
@@ -205,7 +207,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        //TeamColors
+ /*       //TeamColors
         let homeJerseyColorPersistentObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
         if let homeJerseyColorPersistent = homeJerseyColorPersistentObject as? String {
             if homeJerseyColorPersistent == "black" {
@@ -357,7 +359,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
         T2Jersey10Button.backgroundColor = opponentJerseyColor
         T2Jersey11Button.backgroundColor = opponentJerseyColor
         T2Jersey12Button.backgroundColor = opponentJerseyColor
-    }
+   */ } 
 }
 
 

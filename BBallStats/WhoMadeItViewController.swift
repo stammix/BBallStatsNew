@@ -14,7 +14,11 @@ class WhoMadeItViewController: UIViewController {
     var JerseyColor = UIColor.white
     var tappedAction = "NO ACTION"
     var actualMinute = 1
-    
+    var homeTeamColor = UIColor()
+    var guestTeamColor = UIColor()
+    var player = 1
+    var playerToSwitchIn = 6
+    var paleJerseyColor = true
   
     @IBOutlet weak var jersey1Button: UIButton!
     @IBOutlet weak var jersey2Button: UIButton!
@@ -32,109 +36,80 @@ class WhoMadeItViewController: UIViewController {
     
     
     @IBAction func T1P1Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P1", forKey: "player")
-        print("by T1P1")
+        player = 1
         let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P2Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P2", forKey: "player")
-        print("by T1P2")
+        player = 2
         let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P3Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P3", forKey: "player")
-        print("by T1P3")
+        player = 3
         let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P4Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P4", forKey: "player")
-        print("by T1P4")
+        player = 4
       let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P5Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P5", forKey: "player")
-        print("by T1P5")
+        player = 5
        let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P6Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P6", forKey: "nowPlayingPlayer")
-        print("by T1P6 - playerexchange")
-        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: self)
+        playerToSwitchIn = 6
+        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
     @IBAction func T1P7Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P7", forKey: "nowPlayingPlayer")
-        print("by T1P7 - playerexchange")
-        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: self)
+        playerToSwitchIn = 7
+        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
     
     @IBAction func T1P8Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P8", forKey: "nowPlayingPlayer")
-        print("by T1P8 - playerexchange")
-        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: self)
+        playerToSwitchIn = 8
+        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
     @IBAction func T1P9Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P9", forKey: "nowPlayingPlayer")
-        print("by T1P9 - playerexchange")
-        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: self)
+        playerToSwitchIn = 9
+        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
     @IBAction func T1P10Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P10", forKey: "nowPlayingPlayer")
-        print("by T1P10 - playerexchange")
-        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: self)
+        playerToSwitchIn = 10
+        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
     @IBAction func T1P11Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P11", forKey: "nowPlayingPlayer")
-        print("by T1P11 - playerexchange")
-        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: self)
+        playerToSwitchIn = 11
+        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
     @IBAction func T1P12Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
-        UserDefaults.standard.set("P12", forKey: "nowPlayingPlayer")
-        print("by T1P12 - playerexchange")
-        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: self)
+        playerToSwitchIn = 12
+        self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
     
      override func viewDidLoad() {
      super.viewDidLoad()
      //TeamColors
-     let homeJerseyColorObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
-     if let homeJerseyColor = homeJerseyColorObject as? String {
-     if homeJerseyColor == "black" {
+        JerseyColor = homeTeamColor
+        
+     if homeTeamColor == UIColor.black {
      paleJerseyColor = false
-     JerseyColor = UIColor.black
-     } else if homeJerseyColor == "blue" {
+     } else if homeTeamColor == UIColor.blue{
      paleJerseyColor = false
-     JerseyColor = UIColor.blue
-     } else if homeJerseyColor == "red" {
+     } else if homeTeamColor == UIColor.red{
      paleJerseyColor = false
-     JerseyColor = UIColor.red
-     } else if homeJerseyColor == "white" {
+     } else if homeTeamColor == UIColor.white{
      paleJerseyColor = true
      JerseyColor = UIColor.white
-     } else if homeJerseyColor == "yellow" {
+     } else if homeTeamColor == UIColor.yellow{
      paleJerseyColor = true
-     JerseyColor = UIColor.yellow
-     } else if homeJerseyColor == "green" {
+     } else if homeTeamColor == UIColor.green{
      paleJerseyColor = true
-     JerseyColor = UIColor.green
      }
-     }
+     
      
      if paleJerseyColor == true {
      jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
@@ -189,7 +164,13 @@ class WhoMadeItViewController: UIViewController {
         jersey11Button.backgroundColor = JerseyColor
         jersey12Button.backgroundColor = JerseyColor
 
+        print ("HomeTeamColor is \(homeTeamColor)")
+        print ("TappedAction is \(tappedAction)")
         print("There was a \(tappedAction) in the \(actualMinute). Minute")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let subVC = segue.destination as! SubstitutionViewController
+        subVC.newPlayer = playerToSwitchIn
+    }
 }
