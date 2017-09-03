@@ -15,12 +15,15 @@ class SubstitutionViewController: UIViewController {
     var gonePlayer = 1
     var newPlayer = 6
     var changingTeam = 1
-    var paleJerseyColor = true
+    var paleJerseyColor = false
     var homeTeamColor = UIColor()
     var guestTeamColor = UIColor()
+    var subTeamColor = UIColor ()
    // var JerseyColor = UIColor.black
     var actualMinute = 1
     var substution = 0
+    var tappedAction = ""
+    var chosenTeam = 1
     
     @IBOutlet weak var SubButton1: UIButton!
     @IBOutlet weak var SubButton2: UIButton!
@@ -55,7 +58,7 @@ class SubstitutionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-  /*     if changingTeam == 1 {
+        if changingTeam == 1 {
             SubButton1.backgroundColor = homeTeamColor
             SubButton2.backgroundColor = homeTeamColor
             SubButton3.backgroundColor = homeTeamColor
@@ -67,8 +70,27 @@ class SubstitutionViewController: UIViewController {
             SubButton3.backgroundColor = guestTeamColor
             SubButton4.backgroundColor = guestTeamColor
             SubButton5.backgroundColor = guestTeamColor
-            
-        } */
+        }
+    
+        if homeTeamColor == UIColor.white {
+            paleJerseyColor = true
+        } else if homeTeamColor == UIColor.yellow{
+            paleJerseyColor = true
+        } else if homeTeamColor == UIColor.green{
+            paleJerseyColor = true
+        }
+        if paleJerseyColor == true {
+            SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton1.setTitleColor(UIColor.black, for: .normal)
+            SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton2.setTitleColor(UIColor.black, for: .normal)
+            SubButton3.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton3.setTitleColor(UIColor.black, for: .normal)
+            SubButton4.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton4.setTitleColor(UIColor.black, for: .normal)
+            SubButton5.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            SubButton5.setTitleColor(UIColor.black, for: .normal)
+        }
         
         
   /*      //TeamColors
@@ -163,7 +185,10 @@ class SubstitutionViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let statVC = segue.destination as! WhatHappendViewController
+        statVC.gonePlayer = gonePlayer
         statVC.newPlayer = newPlayer
+        statVC.statAction = tappedAction
+        statVC.chosenTeam = chosenTeam
     }
 
 }

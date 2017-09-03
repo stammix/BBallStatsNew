@@ -14,6 +14,7 @@ class InGameSettingsViewController: UIViewController {
     var homeTeamColor = UIColor.white
     var opponentTeamColor = UIColor.black
     var homeColorPale = true
+    var guestColorPale = false
     var Period = 1
     var Minute = 1
     var homeTeamScore = 0

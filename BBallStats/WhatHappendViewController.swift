@@ -29,11 +29,12 @@ class WhatHappendViewController: UIViewController {
     var Period = 1
     var segueToWhoMade = "whatHappendToWhoMadeItSegue"
     var tappedAction = "2pointer"
-    var homeTeamScore = 0
     var collectStatsForBothTeams = 1
+    var chosenTeam = 1
     var substitution = 0
     var gonePlayer = 1
     var newPlayer = 6
+    var statAction = ""
     
     
     @IBAction func backToSettingsButton(_ sender: AnyObject) {
@@ -224,6 +225,7 @@ class WhatHappendViewController: UIViewController {
         whoVC.tappedAction = sender as! String
         whoVC.actualMinute = currentMinute
         whoVC.homeTeamColor = homeTeamColor
+        
         } else if segue.identifier == "whatHappendToWhoMadeBothTeamsSegue" {
         let whoVC = segue.destination as! WhoMadeItBothTeamsViewController
         whoVC.tappedAction = sender as! String
@@ -233,6 +235,18 @@ class WhatHappendViewController: UIViewController {
         } else if segue.identifier == "breakSegue" {
         let breakVC = segue.destination as! BreakViewController
         breakVC.Period = Period
+        } else if segue.identifier == "toInGameSettingsSegue" {
+            let keepScore = segue.destination as! InGameSettingsViewController
+            keepScore.Minute = currentMinute
+            keepScore.homeTeamColor = homeTeamColor
+            keepScore.opponentTeamColor = guestTeamColor
+            keepScore.homeColorPale = homeColorPale
+            keepScore.guestColorPale = guestColorPale
+            keepScore.homeTeamScore = currentScoreTeamOne
+            keepScore.guestTeamScore = currentScoreTeamTwo
+            keepScore.collectStatsForBothTeams = collectStatsForBothTeams
+            keepScore.Period = Period
+            
         }
     }
     
@@ -311,7 +325,7 @@ class WhatHappendViewController: UIViewController {
                 refreshMinutes()
                 print ("test1")
                 updateLabels()
-        } */
+        }
         
         let resetGameObject = UserDefaults.standard.object(forKey: "action")
         if let resetGame = resetGameObject as? String {
@@ -325,7 +339,7 @@ class WhatHappendViewController: UIViewController {
             resetMinutes()
             updateLabels()
             }
-        }
+        } */
         
         let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
         if let lastStatMinute = lastStatMinuteObject as? String {
@@ -359,44 +373,40 @@ class WhatHappendViewController: UIViewController {
 //            //lastStatPlayerLabel.textColor = teamOneColor
 //        }
   
-     /*   let selectedTeamObject = UserDefaults.standard.object(forKey: "selectedTeam")
-        if let selectedTeam = selectedTeamObject as? String {
-            if selectedTeam == "T1" {
+     
+            if chosenTeam == 1 {
                 print("selected Team T1")
-                    let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
-                    if let lastStatAction = lastStatActionObject as? String {
-                        if lastStatAction == "2Points" {
+                    if statAction == "2Pointer" {
                             currentScoreTeamOne = currentScoreTeamOne + 2
                             currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-                        } else if lastStatAction == "3Points" {
+                        } else if statAction == "3Pointer" {
                             currentScoreTeamOne = currentScoreTeamOne + 3
                             currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-                        } else if lastStatAction == "FTmade" {
+                        } else if statAction == "FTmade" {
                             currentScoreTeamOne = currentScoreTeamOne + 1
                             currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
                         }
-                        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
-                        if let lastStatPlayer = lastStatPlayerObject as? String {
-                            lastStatPlayerLabel.text = "\(lastStatPlayer)"
-                            let lastStatTeamColorObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
+}
+      /*                      lastStatPlayerLabel.text = "\(statPlayer)"
+                            lastStatPlayerLabel.color = homeTeamColor
                             if let lastStatTeamColor = lastStatTeamColorObject as? String {
-                                if lastStatTeamColor == "black" {
+                                if homeTeamColor == "black" {
                                     lastStatPlayerLabel.textColor = UIColor.black
-                                } else if lastStatTeamColor == "blue" {
+                                } else if homeTeamColor == "blue" {
                                     lastStatPlayerLabel.textColor = UIColor.blue
-                                } else if lastStatTeamColor == "red" {
+                                } else if homeTeamColor == "red" {
                                     lastStatPlayerLabel.textColor = UIColor.red
-                                } else if lastStatTeamColor == "white" {
+                                } else if homeTeamColor == "white" {
                                     lastStatPlayerLabel.textColor = UIColor.white
-                                } else if lastStatTeamColor == "yellow" {
+                                } else if homeTeamColor == "yellow" {
                                     lastStatPlayerLabel.textColor = UIColor.yellow
-                                } else if lastStatTeamColor == "green" {
+                                } else if homeTeamColor == "green" {
                                     lastStatPlayerLabel.textColor = UIColor.green
                                 }
                             }
                         }
                 }
-            } else if selectedTeam == "T2" {
+    /*        } else if chosenTeam == 2 {
                 print("selected Team T2")
                 let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
                 if let lastStatAction = lastStatActionObject as? String {
@@ -433,7 +443,7 @@ class WhatHappendViewController: UIViewController {
                     
                 }
             }
-        }*/
+        }*/ */
         updateLabels()
     }
 }

@@ -19,6 +19,7 @@ class WhoMadeItViewController: UIViewController {
     var player = 1
     var playerToSwitchIn = 6
     var paleJerseyColor = true
+    var chosenTeam = 1
   
     @IBOutlet weak var jersey1Button: UIButton!
     @IBOutlet weak var jersey2Button: UIButton!
@@ -93,6 +94,7 @@ class WhoMadeItViewController: UIViewController {
      override func viewDidLoad() {
      super.viewDidLoad()
      //TeamColors
+        
         JerseyColor = homeTeamColor
         
      if homeTeamColor == UIColor.black {
@@ -172,5 +174,9 @@ class WhoMadeItViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let subVC = segue.destination as! SubstitutionViewController
         subVC.newPlayer = playerToSwitchIn
+        subVC.homeTeamColor = homeTeamColor
+        subVC.guestTeamColor = guestTeamColor
+        subVC.tappedAction = tappedAction
+        subVC.chosenTeam = chosenTeam
     }
 }
