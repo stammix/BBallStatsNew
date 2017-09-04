@@ -14,8 +14,8 @@ class WhatHappendViewController: UIViewController {
 
     var homeTeamColor = UIColor()
     var guestTeamColor = UIColor()
-    var homeColorPale = false
-    var guestColorPale = true
+    var homeColorPale = true
+    var guestColorPale = false
     var currentMinute = 1
     var currentMinuteMinusTwo = -1
     var currentMinuteMinusOne = 0
@@ -226,6 +226,7 @@ class WhatHappendViewController: UIViewController {
         whoVC.tappedAction = sender as! String
         whoVC.actualMinute = currentMinute
         whoVC.homeTeamColor = homeTeamColor
+        whoVC.homeColorPale = homeColorPale
         whoVC.quarterLength = quarterLength
      //   whoVC.GameTime = GameTime
         } else if segue.identifier == "whatHappendToWhoMadeBothTeamsSegue" {
@@ -234,6 +235,8 @@ class WhatHappendViewController: UIViewController {
         whoVC.actualMinute = currentMinute
         whoVC.homeTeamColor = homeTeamColor
         whoVC.guestTeamColor = guestTeamColor
+        whoVC.homeColorPale = homeColorPale
+        whoVC.guestColorPale = guestColorPale
    //     whoVC.GameTime = GameTime
         } else if segue.identifier == "breakSegue" {
         let breakVC = segue.destination as! BreakViewController
@@ -256,6 +259,7 @@ class WhatHappendViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+          print("*** what homeColorPale \(homeColorPale), guestColorPale \(guestColorPale)")
         GameTime = quarterLength
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -300,7 +304,6 @@ class WhatHappendViewController: UIViewController {
            }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("*** GameTime \(GameTime) quarterLength \(quarterLength)")
     
       /*  let setPeriodObject = UserDefaults.standard.object(forKey: "period")
         if let setPeriod = setPeriodObject as? String {

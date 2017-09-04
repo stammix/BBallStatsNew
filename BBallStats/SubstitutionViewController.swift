@@ -15,10 +15,12 @@ class SubstitutionViewController: UIViewController {
     var gonePlayer = 1
     var newPlayer = 6
     var changingTeam = 1
-    var paleJerseyColor = false
     var homeTeamColor = UIColor()
     var guestTeamColor = UIColor()
     var subTeamColor = UIColor ()
+    var homeColorPale = true
+    var guestColorPale = false
+    var subTeamPale = true
    // var JerseyColor = UIColor.black
     var actualMinute = 1
     var substution = 0
@@ -61,12 +63,14 @@ class SubstitutionViewController: UIViewController {
         super.viewDidLoad()
         
         if chosenTeam == 1 {
+            subTeamPale = homeColorPale
             SubButton1.backgroundColor = homeTeamColor
             SubButton2.backgroundColor = homeTeamColor
             SubButton3.backgroundColor = homeTeamColor
             SubButton4.backgroundColor = homeTeamColor
             SubButton5.backgroundColor = homeTeamColor
         } else if chosenTeam == 2 {
+            subTeamPale = guestColorPale
             SubButton1.backgroundColor = guestTeamColor
             SubButton2.backgroundColor = guestTeamColor
             SubButton3.backgroundColor = guestTeamColor
@@ -74,14 +78,25 @@ class SubstitutionViewController: UIViewController {
             SubButton5.backgroundColor = guestTeamColor
         }
     
-        if homeTeamColor == UIColor.white {
+   /*     if homeTeamColor == UIColor.white {
             paleJerseyColor = true
         } else if homeTeamColor == UIColor.yellow{
             paleJerseyColor = true
         } else if homeTeamColor == UIColor.green{
             paleJerseyColor = true
+        } else {
+            paleJerseyColor = false
         }
-        if paleJerseyColor == true {
+        if guestTeamColor == UIColor.white {
+            paleJerseyColor = true
+        } else if guestTeamColor == UIColor.yellow{
+            paleJerseyColor = true
+        } else if guestTeamColor == UIColor.green{
+            paleJerseyColor = true
+        } else {
+            paleJerseyColor = false
+        } */
+        if subTeamPale == true {
             SubButton1.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
             SubButton1.setTitleColor(UIColor.black, for: .normal)
             SubButton2.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
@@ -193,6 +208,8 @@ class SubstitutionViewController: UIViewController {
         statVC.chosenTeam = chosenTeam
         statVC.quarterLength = quarterLength
         statVC.GameTime = GameTime
+        statVC.homeColorPale = homeColorPale
+        statVC.guestColorPale = guestColorPale
     }
 
 }

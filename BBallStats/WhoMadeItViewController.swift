@@ -16,6 +16,8 @@ class WhoMadeItViewController: UIViewController {
     var actualMinute = 1
     var homeTeamColor = UIColor()
     var guestTeamColor = UIColor()
+    var homeColorPale = true
+    var guestColorPale = false
     var player = 1
     var playerToSwitchIn = 6
     var paleJerseyColor = true

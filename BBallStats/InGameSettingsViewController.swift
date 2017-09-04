@@ -54,7 +54,7 @@ class InGameSettingsViewController: UIViewController {
     
     @IBAction func HomeTeamRed(_ sender: AnyObject) {
         homeTeamColor = UIColor.red
-        homeColorPale = true
+        homeColorPale = false
     }
     @IBAction func HomeTeamWhite(_ sender: AnyObject) {
         homeTeamColor = UIColor.white
@@ -67,7 +67,7 @@ class InGameSettingsViewController: UIViewController {
     }
     @IBAction func HomeTeamGreen(_ sender: AnyObject) {
         homeTeamColor = UIColor.green
-        homeColorPale = false
+        homeColorPale = true
     }
     
     @IBAction func OpponentTeamBlack(_ sender: UIButton) {
@@ -100,8 +100,8 @@ class InGameSettingsViewController: UIViewController {
         let whatVC = NVC.topViewController as! WhatHappendViewController
         whatVC.homeTeamColor = homeTeamColor
         whatVC.guestTeamColor = opponentTeamColor
-        whatVC.homeColorPale = false
-        whatVC.guestColorPale = true
+        whatVC.homeColorPale = homeColorPale
+        whatVC.guestColorPale = guestColorPale
         whatVC.Period = Period
         whatVC.currentMinute = Minute
         whatVC.currentScoreTeamOne = homeTeamScore
