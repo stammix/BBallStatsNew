@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
 class WhoMadeItBothTeamsViewController: UIViewController {
     
     var homeTeamColor = UIColor.white
     var guestTeamColor = UIColor.black
     var homePaleJerseyColor = true
+    var guestPaleJerseyColor = false
     var opponentPaleJerseyColor = false
     var tappedAction = "2pointer"
     var actualMinute = 1
+    var tappedAction = "NO ACTION"
+    var player = 1
+    var playerToSwitchIn = 6
+    var chosenTeam = 1
+    
+ 
+   
+
     
     
     @IBOutlet weak var T1Jersey1Button: UIButton!
@@ -46,213 +56,184 @@ class WhoMadeItBothTeamsViewController: UIViewController {
     
     
     @IBAction func T1P1Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P1", forKey: "player")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 1
         print("by T1P1")
         let _ = navigationController?.popViewController(animated: true)
-        //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P2Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P2", forKey: "player")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 2
         print("by T1P2")
         let _ = navigationController?.popViewController(animated: true)
-        //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P3Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P3", forKey: "player")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 3
         print("by T1P3")
         let _ = navigationController?.popViewController(animated: true)
-        //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P4Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P4", forKey: "player")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 4
         print("by T1P4")
         let _ = navigationController?.popViewController(animated: true)
-        //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P5Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P5", forKey: "player")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 5
         print("by T1P5")
         let _ = navigationController?.popViewController(animated: true)
-        //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P6Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P6", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 6
         print("by T1P6 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T1P7Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P7", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 7
         print("by T1P7 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     
     @IBAction func T1P8Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P8", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 8
         print("by T1P8 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T1P9Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P9", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 9
         print("by T1P9 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T1P10Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P10", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 10
         print("by T1P10 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T1P11Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P11", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 11
         print("by T1P11 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T1P12Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P12", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T1", forKey: "selectedTeam")
+        chosenTeam = 1
+        player = 12
         print("by T1P12 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
 
     @IBAction func T2P1Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P1", forKey: "player")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 1
         print("by T2P1")
         let _ = navigationController?.popViewController(animated: true)
-        //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T2P2Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P2", forKey: "player")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 2
         print("by T2P2")
         let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T2P3Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P3", forKey: "player")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 3
         print("by T2P3")
         let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T2P4Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P4", forKey: "player")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 4
         print("by T2P4")
         let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T2P5Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P5", forKey: "player")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 5
         print("by T2P5")
         let _ = navigationController?.popViewController(animated: true)
         //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T2P6Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P6", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 6
         print("by T2P6 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T2P7Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P7", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 7
         print("by T2P7 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T2P8Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P8", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 8
         print("by T2P8 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T2P9Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T1P9", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 9
         print("by T2P9 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T2P10Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P10", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 10
         print("by T2P10 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T2P11Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P11", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 11
         print("by T2P11 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     @IBAction func T2P12Pressed(_ sender: UIButton) {
-        UserDefaults.standard.set("T2P12", forKey: "nowPlayingPlayer")
-        UserDefaults.standard.set("T2", forKey: "selectedTeam")
+        chosenTeam = 2
+        player = 12
         print("by T2P12 - playerexchange")
         self.performSegue(withIdentifier: "BothTeamsToSubstitutionSegue", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
- /*       //TeamColors
-        let homeJerseyColorPersistentObject = UserDefaults.standard.object(forKey: "HomeJerseyColor")
-        if let homeJerseyColorPersistent = homeJerseyColorPersistentObject as? String {
-            if homeJerseyColorPersistent == "black" {
-                homePaleJerseyColor = false
-                homeJerseyColor = UIColor.black
-            } else if homeJerseyColorPersistent == "blue" {
-                homePaleJerseyColor = false
-                homeJerseyColor = UIColor.blue
-            } else if homeJerseyColorPersistent == "red" {
-                homePaleJerseyColor = false
-                homeJerseyColor = UIColor.red
-            } else if homeJerseyColorPersistent == "white" {
-                homePaleJerseyColor = true
-                homeJerseyColor = UIColor.white
-            } else if homeJerseyColorPersistent == "yellow" {
-                homePaleJerseyColor = true
-                homeJerseyColor = UIColor.yellow
-            } else if homeJerseyColorPersistent == "green" {
-                homePaleJerseyColor = true
-                homeJerseyColor = UIColor.green
-            }
-        }
+        T1Jersey1Button.backgroundColor = homeTeamColor
+        T1Jersey2Button.backgroundColor = homeTeamColor
+        T1Jersey3Button.backgroundColor = homeTeamColor
+        T1Jersey4Button.backgroundColor = homeTeamColor
+        T1Jersey5Button.backgroundColor = homeTeamColor
+        T1Jersey6Button.backgroundColor = homeTeamColor
+        T1Jersey7Button.backgroundColor = homeTeamColor
+        T1Jersey8Button.backgroundColor = homeTeamColor
+        T1Jersey9Button.backgroundColor = homeTeamColor
+        T1Jersey10Button.backgroundColor = homeTeamColor
+        T1Jersey11Button.backgroundColor = homeTeamColor
+        T1Jersey12Button.backgroundColor = homeTeamColor
         
-        let opponentJerseyColorPerstistentObject = UserDefaults.standard.object(forKey: "OpponentJerseyColor")
-        if let opponentJerseyColorPersistent = opponentJerseyColorPerstistentObject as? String {
-            if opponentJerseyColorPersistent == "black" {
-                opponentPaleJerseyColor = false
-                opponentJerseyColor = UIColor.black
-            } else if opponentJerseyColorPersistent == "blue" {
-                opponentPaleJerseyColor = false
-                opponentJerseyColor = UIColor.blue
-            } else if opponentJerseyColorPersistent == "red" {
-                opponentPaleJerseyColor = false
-                opponentJerseyColor = UIColor.red
-            } else if opponentJerseyColorPersistent == "white" {
-                opponentPaleJerseyColor = true
-                opponentJerseyColor = UIColor.white
-            } else if opponentJerseyColorPersistent == "yellow" {
-                opponentPaleJerseyColor = true
-                opponentJerseyColor = UIColor.yellow
-            } else if opponentJerseyColorPersistent == "green" {
-                opponentPaleJerseyColor = true
-                opponentJerseyColor = UIColor.green
-            }
-        }
+        T2Jersey1Button.backgroundColor = guestTeamColor
+        T2Jersey2Button.backgroundColor = guestTeamColor
+        T2Jersey3Button.backgroundColor = guestTeamColor
+        T2Jersey4Button.backgroundColor = guestTeamColor
+        T2Jersey5Button.backgroundColor = guestTeamColor
+        T2Jersey6Button.backgroundColor = guestTeamColor
+        T2Jersey7Button.backgroundColor = guestTeamColor
+        T2Jersey8Button.backgroundColor = guestTeamColor
+        T2Jersey9Button.backgroundColor = guestTeamColor
+        T2Jersey10Button.backgroundColor = guestTeamColor
+        T2Jersey11Button.backgroundColor = guestTeamColor
+        T2Jersey12Button.backgroundColor = guestTeamColor
         
         if homePaleJerseyColor == true {
             T1Jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
@@ -294,7 +275,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T1Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
         }
         
-        if opponentPaleJerseyColor == true {
+        if guestPaleJerseyColor == true {
             T2Jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
             T2Jersey1Button.setTitleColor(UIColor.black, for: .normal)
             T2Jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
@@ -319,7 +300,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T2Jersey11Button.setTitleColor(UIColor.black, for: .normal)
             T2Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
             T2Jersey12Button.setTitleColor(UIColor.black, for: .normal)
-        } else if opponentPaleJerseyColor == false {
+        } else if guestPaleJerseyColor == false {
             T2Jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T2Jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T2Jersey3Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
@@ -333,33 +314,15 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T2Jersey11Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T2Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
         }
-        
-        T1Jersey1Button.backgroundColor = homeJerseyColor
-        T1Jersey2Button.backgroundColor = homeJerseyColor
-        T1Jersey3Button.backgroundColor = homeJerseyColor
-        T1Jersey4Button.backgroundColor = homeJerseyColor
-        T1Jersey5Button.backgroundColor = homeJerseyColor
-        T1Jersey6Button.backgroundColor = homeJerseyColor
-        T1Jersey7Button.backgroundColor = homeJerseyColor
-        T1Jersey8Button.backgroundColor = homeJerseyColor
-        T1Jersey9Button.backgroundColor = homeJerseyColor
-        T1Jersey10Button.backgroundColor = homeJerseyColor
-        T1Jersey11Button.backgroundColor = homeJerseyColor
-        T1Jersey12Button.backgroundColor = homeJerseyColor
-        
-        T2Jersey1Button.backgroundColor = opponentJerseyColor
-        T2Jersey2Button.backgroundColor = opponentJerseyColor
-        T2Jersey3Button.backgroundColor = opponentJerseyColor
-        T2Jersey4Button.backgroundColor = opponentJerseyColor
-        T2Jersey5Button.backgroundColor = opponentJerseyColor
-        T2Jersey6Button.backgroundColor = opponentJerseyColor
-        T2Jersey7Button.backgroundColor = opponentJerseyColor
-        T2Jersey8Button.backgroundColor = opponentJerseyColor
-        T2Jersey9Button.backgroundColor = opponentJerseyColor
-        T2Jersey10Button.backgroundColor = opponentJerseyColor
-        T2Jersey11Button.backgroundColor = opponentJerseyColor
-        T2Jersey12Button.backgroundColor = opponentJerseyColor
-   */ } 
+            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let subVC = segue.destination as! SubstitutionViewController
+            subVC.newPlayer = playerToSwitchIn
+            subVC.homeTeamColor = homeTeamColor
+            subVC.guestTeamColor = guestTeamColor
+            subVC.tappedAction = tappedAction
+            subVC.chosenTeam = chosenTeam
+    } 
+        //Save Stat to CoreData!!
 }
 
 
