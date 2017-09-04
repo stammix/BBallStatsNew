@@ -58,13 +58,13 @@ class SubstitutionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if changingTeam == 1 {
+        if chosenTeam == 1 {
             SubButton1.backgroundColor = homeTeamColor
             SubButton2.backgroundColor = homeTeamColor
             SubButton3.backgroundColor = homeTeamColor
             SubButton4.backgroundColor = homeTeamColor
             SubButton5.backgroundColor = homeTeamColor
-        } else if changingTeam == 2 {
+        } else if chosenTeam == 2 {
             SubButton1.backgroundColor = guestTeamColor
             SubButton2.backgroundColor = guestTeamColor
             SubButton3.backgroundColor = guestTeamColor

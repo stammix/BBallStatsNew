@@ -225,7 +225,6 @@ class WhatHappendViewController: UIViewController {
         whoVC.tappedAction = sender as! String
         whoVC.actualMinute = currentMinute
         whoVC.homeTeamColor = homeTeamColor
-        
         } else if segue.identifier == "whatHappendToWhoMadeBothTeamsSegue" {
         let whoVC = segue.destination as! WhoMadeItBothTeamsViewController
         whoVC.tappedAction = sender as! String

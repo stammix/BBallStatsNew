@@ -18,7 +18,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
     var opponentPaleJerseyColor = false
     var tappedAction = "2pointer"
     var actualMinute = 1
-    var tappedAction = "NO ACTION"
+    var Action = ""
     var player = 1
     var playerToSwitchIn = 6
     var chosenTeam = 1
@@ -235,7 +235,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
         T2Jersey11Button.backgroundColor = guestTeamColor
         T2Jersey12Button.backgroundColor = guestTeamColor
         
-        if homePaleJerseyColor == true {
+        if homePaleJerseyColor == false {
             T1Jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
             T1Jersey1Button.setTitleColor(UIColor.black, for: .normal)
             T1Jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
@@ -260,7 +260,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T1Jersey11Button.setTitleColor(UIColor.black, for: .normal)
             T1Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
             T1Jersey12Button.setTitleColor(UIColor.black, for: .normal)
-        } else if homePaleJerseyColor == false {
+        } else if homePaleJerseyColor == true {
             T1Jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T1Jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T1Jersey3Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
@@ -275,7 +275,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T1Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
         }
         
-        if guestPaleJerseyColor == true {
+        if guestPaleJerseyColor == false {
             T2Jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
             T2Jersey1Button.setTitleColor(UIColor.black, for: .normal)
             T2Jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
@@ -300,7 +300,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T2Jersey11Button.setTitleColor(UIColor.black, for: .normal)
             T2Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
             T2Jersey12Button.setTitleColor(UIColor.black, for: .normal)
-        } else if guestPaleJerseyColor == false {
+        } else if guestPaleJerseyColor == true {
             T2Jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T2Jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T2Jersey3Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
@@ -314,12 +314,13 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T2Jersey11Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
             T2Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
         }
+    }
             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let subVC = segue.destination as! SubstitutionViewController
             subVC.newPlayer = playerToSwitchIn
             subVC.homeTeamColor = homeTeamColor
             subVC.guestTeamColor = guestTeamColor
-            subVC.tappedAction = tappedAction
+            subVC.tappedAction = Action
             subVC.chosenTeam = chosenTeam
     } 
         //Save Stat to CoreData!!

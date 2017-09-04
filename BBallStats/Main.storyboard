@@ -185,6 +185,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="teamSwitch" destination="jzY-6a-7Pj" id="jiA-h4-C9P"/>
                         <segue destination="GOF-hA-dd3" kind="show" identifier="SettingsToGameSegue" id="5cg-4I-PrN"/>
                     </connections>
                 </viewController>

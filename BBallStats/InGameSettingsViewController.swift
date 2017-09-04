@@ -23,6 +23,7 @@ class InGameSettingsViewController: UIViewController {
     
   
 
+    @IBOutlet weak var teamSwitch: UISwitch!
     @IBAction func collectBothSwitch(_ sender: UISwitch) {
         if collectStatsForBothTeams == 1 {
             collectStatsForBothTeams = 2
@@ -111,6 +112,9 @@ class InGameSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if collectStatsForBothTeams == 2 {
+            teamSwitch.setOn(true, animated: true)
+        }
         
         // Do any additional setup after loading the view.
     
