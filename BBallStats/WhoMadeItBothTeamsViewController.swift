@@ -22,6 +22,8 @@ class WhoMadeItBothTeamsViewController: UIViewController {
     var player = 1
     var playerToSwitchIn = 6
     var chosenTeam = 1
+    var quarterLength = 10
+    var GameTime = 10
     
  
    
@@ -322,6 +324,8 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             subVC.guestTeamColor = guestTeamColor
             subVC.tappedAction = Action
             subVC.chosenTeam = chosenTeam
+            subVC.quarterLength = quarterLength
+            subVC.GameTime = GameTime
     } 
         //Save Stat to CoreData!!
 }

@@ -20,7 +20,7 @@ class InGameSettingsViewController: UIViewController {
     var homeTeamScore = 0
     var guestTeamScore = 0
     var collectStatsForBothTeams = 1
-    
+    var quarterLength = 10
   
 
     @IBOutlet weak var teamSwitch: UISwitch!
@@ -107,6 +107,7 @@ class InGameSettingsViewController: UIViewController {
         whatVC.currentScoreTeamOne = homeTeamScore
         whatVC.currentScoreTeamTwo = guestTeamScore
         whatVC.collectStatsForBothTeams = collectStatsForBothTeams
+        whatVC.quarterLength = quarterLength
     }
     
     

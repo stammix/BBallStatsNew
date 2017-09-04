@@ -437,7 +437,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sc-dH-WR7">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="e55-4V-tNh"/>
-                                    <constraint firstAttribute="width" constant="62" id="uXb-CW-8S0"/>
+                                    <constraint firstAttribute="width" constant="92" id="uXb-CW-8S0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -473,7 +473,7 @@
                             <constraint firstItem="38x-TC-6SQ" firstAttribute="centerX" secondItem="XTA-ex-T1B" secondAttribute="centerX" id="bH2-zM-Q2W"/>
                             <constraint firstItem="8fJ-M6-5UU" firstAttribute="centerY" secondItem="W5H-dm-4PC" secondAttribute="centerY" id="bpW-FE-1hl"/>
                             <constraint firstItem="ak3-dm-YSv" firstAttribute="centerY" secondItem="MEG-yS-Jja" secondAttribute="centerY" id="c2A-Ca-3Qv"/>
-                            <constraint firstItem="9w3-7G-gOE" firstAttribute="top" secondItem="5Sc-dH-WR7" secondAttribute="bottom" constant="20" id="dSm-Sd-Edq"/>
+                            <constraint firstItem="9w3-7G-gOE" firstAttribute="top" secondItem="5Sc-dH-WR7" secondAttribute="bottom" constant="21.5" id="dSm-Sd-Edq"/>
                             <constraint firstItem="o3I-Fs-jFZ" firstAttribute="leading" secondItem="W5H-dm-4PC" secondAttribute="trailing" constant="88" id="dzN-tc-e2i"/>
                             <constraint firstItem="mgj-xp-Qyj" firstAttribute="centerY" secondItem="iHW-Na-Qu8" secondAttribute="centerY" id="etK-a1-7To"/>
                             <constraint firstItem="mgj-xp-Qyj" firstAttribute="leading" secondItem="iHW-Na-Qu8" secondAttribute="trailing" constant="42" id="gLp-KN-EGg"/>
@@ -525,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="374"/>
+            <point key="canvasLocation" x="340.47976011994007" y="373.60000000000002"/>
         </scene>
         <!--Break View Controller-->
         <scene sceneID="lcE-vH-4kJ">
@@ -542,7 +542,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RDv-dH-LYy">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-Fg-UCc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-Fg-UCc" customClass="nextQuarterButton">
                                 <state key="normal" title="Start next Quarter"/>
                                 <connections>
                                     <action selector="nextQuarterButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="bgg-iz-7qu"/>
@@ -586,7 +586,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
-                        <outlet property="nextPeriodButtonLabel" destination="KV3-Fg-UCc" id="f0m-81-qZQ"/>
+                        <outlet property="nextQuarterButtonLabel" destination="KV3-Fg-UCc" id="Gme-mX-EMw"/>
                         <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>
                     </connections>

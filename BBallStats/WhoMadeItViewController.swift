@@ -20,6 +20,8 @@ class WhoMadeItViewController: UIViewController {
     var playerToSwitchIn = 6
     var paleJerseyColor = true
     var chosenTeam = 1
+    var quarterLength = 10
+    var GameTime = 10
   
     @IBOutlet weak var jersey1Button: UIButton!
     @IBOutlet weak var jersey2Button: UIButton!
@@ -178,5 +180,7 @@ class WhoMadeItViewController: UIViewController {
         subVC.guestTeamColor = guestTeamColor
         subVC.tappedAction = tappedAction
         subVC.chosenTeam = chosenTeam
+        subVC.quarterLength = quarterLength
+        subVC.GameTime = GameTime
     }
 }

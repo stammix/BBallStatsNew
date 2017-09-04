@@ -24,6 +24,8 @@ class SubstitutionViewController: UIViewController {
     var substution = 0
     var tappedAction = ""
     var chosenTeam = 1
+    var quarterLength = 10
+    var GameTime = 10
     
     @IBOutlet weak var SubButton1: UIButton!
     @IBOutlet weak var SubButton2: UIButton!
@@ -189,6 +191,8 @@ class SubstitutionViewController: UIViewController {
         statVC.newPlayer = newPlayer
         statVC.statAction = tappedAction
         statVC.chosenTeam = chosenTeam
+        statVC.quarterLength = quarterLength
+        statVC.GameTime = GameTime
     }
 
 }

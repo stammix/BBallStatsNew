@@ -9,8 +9,6 @@
 import UIKit
 import CoreData
 
- var GameTime = 10
-
 
 class WhatHappendViewController: UIViewController {
 
@@ -23,7 +21,6 @@ class WhatHappendViewController: UIViewController {
     var currentMinuteMinusOne = 0
     var currentMinutePlusOne = 2
     var currentMinutePlusTwo = 3
-    var helpVar = GameTime - 1
     var currentScoreTeamOne = 0
     var currentScoreTeamTwo = 0
     var Period = 1
@@ -35,6 +32,8 @@ class WhatHappendViewController: UIViewController {
     var gonePlayer = 1
     var newPlayer = 6
     var statAction = ""
+    var quarterLength = 10
+    var GameTime = 10
     
     
     @IBAction func backToSettingsButton(_ sender: AnyObject) {
@@ -111,7 +110,6 @@ class WhatHappendViewController: UIViewController {
         } else if currentMinute == GameTime {
             self.performSegue(withIdentifier: "breakSegue", sender: self)
         }
-        print(Period)
         updateLabels()
     }
     
@@ -125,15 +123,17 @@ class WhatHappendViewController: UIViewController {
     }
     
     func refreshMinutes() {
-        if Period == 2 {
-            GameTime = GameTime+GameTime
-            currentMinute = 11
-        } else if Period == 3 {
-            GameTime = (GameTime/2)+GameTime
-            currentMinute = 21
-        } else if Period == 4 {
-            GameTime = (GameTime/3)*4
-            currentMinute = 31
+        if Period > 1 && Period < 5{
+            GameTime = quarterLength * Period
+            currentMinute = ((quarterLength * Period) - quarterLength) + 1
+        } else if Period == 5 {
+    //     let overtimeLength = quarterLength / 2
+            GameTime = ((quarterLength * Period) - (quarterLength / 2))
+            currentMinute = ((quarterLength * Period) - quarterLength) + 1
+        } else if Period > 5 {
+    //      let overtimeLength = quarterLength / 2
+            GameTime = ((quarterLength * Period) - (quarterLength))
+            currentMinute = ((quarterLength * Period) - (quarterLength + (quarterLength / 2))) + 1
         }
 
         currentMinuteMinusTwo = currentMinute-2
@@ -145,6 +145,7 @@ class WhatHappendViewController: UIViewController {
     
     
     func updateLabels(){
+        let helpVar = quarterLength - 1
         self.CurrentMinuteLabel.text = "\(currentMinute)"
        if currentMinuteMinusTwo >= (GameTime-helpVar) {
             self.twoMinutesBackLabel.text = "\(currentMinuteMinusTwo)"
@@ -163,17 +164,17 @@ class WhatHappendViewController: UIViewController {
         if currentMinutePlusTwo < GameTime + 1 {
             self.plusTwoMinutesLabel.text = "\(currentMinutePlusTwo)"
         } else {
-            if currentScoreTeamOne == currentScoreTeamTwo {
+            if Period >= 4 && currentScoreTeamOne == currentScoreTeamTwo {
             self.plusTwoMinutesLabel.text = "OT"
             } else {
             self.plusTwoMinutesLabel.text = "Break"
         }
     }
+        if Period <= 4 {
         periodLabel.text = "Period \(Period)"
-        UserDefaults.standard.set("\(currentMinute)", forKey: "minute")
-        
-        print("Minute \(currentMinute)")
- 
+        } else {
+            periodLabel.text = "Overtime \(Period - 4)"
+        }
     }
     
     //actions
@@ -225,15 +226,19 @@ class WhatHappendViewController: UIViewController {
         whoVC.tappedAction = sender as! String
         whoVC.actualMinute = currentMinute
         whoVC.homeTeamColor = homeTeamColor
+        whoVC.quarterLength = quarterLength
+     //   whoVC.GameTime = GameTime
         } else if segue.identifier == "whatHappendToWhoMadeBothTeamsSegue" {
         let whoVC = segue.destination as! WhoMadeItBothTeamsViewController
         whoVC.tappedAction = sender as! String
         whoVC.actualMinute = currentMinute
         whoVC.homeTeamColor = homeTeamColor
         whoVC.guestTeamColor = guestTeamColor
+   //     whoVC.GameTime = GameTime
         } else if segue.identifier == "breakSegue" {
         let breakVC = segue.destination as! BreakViewController
         breakVC.Period = Period
+        breakVC.quarterLength = quarterLength
         } else if segue.identifier == "toInGameSettingsSegue" {
             let keepScore = segue.destination as! InGameSettingsViewController
             keepScore.Minute = currentMinute
@@ -245,15 +250,19 @@ class WhatHappendViewController: UIViewController {
             keepScore.guestTeamScore = currentScoreTeamTwo
             keepScore.collectStatsForBothTeams = collectStatsForBothTeams
             keepScore.Period = Period
+            keepScore.quarterLength = quarterLength
             
         }
     }
     
     override func viewDidLoad() {
+        GameTime = quarterLength
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
         currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
+      
+        
         //Period = 1
        // UserDefaults.standard.set("1", forKey: "period")
         
@@ -288,10 +297,10 @@ class WhatHappendViewController: UIViewController {
         } */
         refreshMinutes()
         updateLabels()
-    }
+           }
 
     override func viewWillAppear(_ animated: Bool) {
-        print ("Es werden \(collectStatsForBothTeams) Teams angezeigt")
+        print("*** GameTime \(GameTime) quarterLength \(quarterLength)")
     
       /*  let setPeriodObject = UserDefaults.standard.object(forKey: "period")
         if let setPeriod = setPeriodObject as? String {
@@ -374,7 +383,6 @@ class WhatHappendViewController: UIViewController {
   
      
             if chosenTeam == 1 {
-                print("selected Team T1")
                     if statAction == "2Pointer" {
                             currentScoreTeamOne = currentScoreTeamOne + 2
                             currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
