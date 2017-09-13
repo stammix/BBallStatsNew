@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16B2555" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="OneOrBothTeams" syncable="YES">
-        <attribute name="both" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16G29" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Stat" representedClassName="Stat" syncable="YES" codeGenerationType="class">
+        <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="player" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="OneOrBothTeams" positionX="-54" positionY="-9" width="128" height="60"/>
+        <element name="Stat" positionX="-54" positionY="-9" width="128" height="75"/>
     </elements>
 </model>

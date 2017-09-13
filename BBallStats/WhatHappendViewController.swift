@@ -34,6 +34,7 @@ class WhatHappendViewController: UIViewController {
     var statAction = ""
     var quarterLength = 10
     var GameTime = 10
+    var homeTeamName = ""
     
     
     @IBAction func backToSettingsButton(_ sender: AnyObject) {
@@ -61,6 +62,10 @@ class WhatHappendViewController: UIViewController {
     @IBOutlet weak var currentScoreTeamTwoLabel: UILabel!
     
     @IBOutlet weak var periodLabel: UILabel!
+    @IBAction func testHans(_ sender: AnyObject) {
+        homeTeamName = "Hans"
+    
+    }
     
     @IBAction func twoMinutesBackPressed(_ sender: UIButton) {
         if currentMinute > 2 {
@@ -242,11 +247,12 @@ class WhatHappendViewController: UIViewController {
         let breakVC = segue.destination as! BreakViewController
         breakVC.Period = Period
         breakVC.quarterLength = quarterLength
+        breakVC.homeTeamName = homeTeamName
         } else if segue.identifier == "toInGameSettingsSegue" {
             let keepScore = segue.destination as! InGameSettingsViewController
             keepScore.Minute = currentMinute
             keepScore.homeTeamColor = homeTeamColor
-            keepScore.opponentTeamColor = guestTeamColor
+            keepScore.guestTeamColor = guestTeamColor
             keepScore.homeColorPale = homeColorPale
             keepScore.guestColorPale = guestColorPale
             keepScore.homeTeamScore = currentScoreTeamOne
@@ -259,6 +265,9 @@ class WhatHappendViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        
+        
           print("*** what homeColorPale \(homeColorPale), guestColorPale \(guestColorPale)")
         GameTime = quarterLength
         super.viewDidLoad()
@@ -266,7 +275,42 @@ class WhatHappendViewController: UIViewController {
         currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
         currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
       
-        
+        if homeTeamColor == UIColor.black {
+            homeColorPale = false
+        }
+        if homeTeamColor == UIColor.blue {
+            homeColorPale = false
+        }
+        if homeTeamColor == UIColor.red {
+            homeColorPale = false
+        }
+        if homeTeamColor == UIColor.white {
+            homeColorPale = true
+        }
+        if homeTeamColor == UIColor.yellow {
+            homeColorPale = true
+        }
+        if homeTeamColor == UIColor.green {
+            homeColorPale = true
+        }
+        if guestTeamColor == UIColor.black {
+            guestColorPale = false
+        }
+        if guestTeamColor == UIColor.blue {
+            guestColorPale = false
+        }
+        if guestTeamColor == UIColor.red {
+            guestColorPale = false
+        }
+        if guestTeamColor == UIColor.white {
+            guestColorPale = true
+        }
+        if guestTeamColor == UIColor.yellow {
+            guestColorPale = true
+        }
+        if guestTeamColor == UIColor.green {
+            guestColorPale = true
+        }
         //Period = 1
        // UserDefaults.standard.set("1", forKey: "period")
         
@@ -304,6 +348,32 @@ class WhatHappendViewController: UIViewController {
            }
 
     override func viewWillAppear(_ animated: Bool) {
+   /*     let appDelegate = UIApplication.shared.delegate as! AppDelegate // UIApplication.shared().delegate as! AppDelegate is now UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newStat = NSEntityDescription.insertNewObject(forEntityName: "Stats", into: context)
+
+    
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.fetch(request)
+            if results.count > 0 {
+                for result in results as! [NSManagedObject]
+                {
+                    if let player = result.value(forKey: "player") as? String {
+                        print(player)
+                    }
+                }
+            } else {
+                print("No results")
+            }
+        } catch {
+            print("Couldn't fetch results")
+        } */
     
       /*  let setPeriodObject = UserDefaults.standard.object(forKey: "period")
         if let setPeriod = setPeriodObject as? String {
@@ -352,7 +422,7 @@ class WhatHappendViewController: UIViewController {
             }
         } */
         
-        let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
+     /*   let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
         if let lastStatMinute = lastStatMinuteObject as? String {
             
             if lastStatMinute == "1" {
@@ -371,13 +441,13 @@ class WhatHappendViewController: UIViewController {
                 lastStatActionLabel.text = "\(lastStatAction)"
             }
             
-        }
-            if collectStatsForBothTeams == 2 {
+        } */
+        if collectStatsForBothTeams == 2 {
             segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
         } else {
             segueToWhoMade = "whatHappendToWhoMadeItSegue"
         }
-        
+
 //        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
 //        if let lastStatPlayer = lastStatPlayerObject as? String {
 //            lastStatPlayerLabel.text = "\(lastStatPlayer)"
@@ -385,7 +455,7 @@ class WhatHappendViewController: UIViewController {
 //        }
   
      
-            if chosenTeam == 1 {
+        if chosenTeam == 1 {
                     if statAction == "2Pointer" {
                             currentScoreTeamOne = currentScoreTeamOne + 2
                             currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"

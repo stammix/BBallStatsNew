@@ -12,7 +12,7 @@ class InGameSettingsViewController: UIViewController {
 
  //   var collectForBothTeams = false
     var homeTeamColor = UIColor.white
-    var opponentTeamColor = UIColor.black
+    var guestTeamColor = UIColor.black
     var homeColorPale = true
     var guestColorPale = false
     var Period = 1
@@ -45,63 +45,63 @@ class InGameSettingsViewController: UIViewController {
     
     @IBAction func HomeTeamBlack(_ sender: AnyObject) {
         homeTeamColor = UIColor.black
-        homeColorPale = false
+  //      homeColorPale = false
     }
     @IBAction func HomeTeamBlue(_ sender: AnyObject) {
         homeTeamColor = UIColor.blue
-        homeColorPale = false
+  //      homeColorPale = false
     }
     
     @IBAction func HomeTeamRed(_ sender: AnyObject) {
         homeTeamColor = UIColor.red
-        homeColorPale = false
+  //      homeColorPale = false
     }
     @IBAction func HomeTeamWhite(_ sender: AnyObject) {
         homeTeamColor = UIColor.white
-        homeColorPale = true
+ //       homeColorPale = true
     }
     
     @IBAction func HomeTeamYellow(_ sender: AnyObject) {
         homeTeamColor = UIColor.yellow
-        homeColorPale = true
+    //    homeColorPale = true
     }
     @IBAction func HomeTeamGreen(_ sender: AnyObject) {
         homeTeamColor = UIColor.green
-        homeColorPale = true
+  //      homeColorPale = true
     }
     
     @IBAction func OpponentTeamBlack(_ sender: UIButton) {
-        opponentTeamColor = UIColor.black
-        homeColorPale = false
+        guestTeamColor = UIColor.black
+    //    homeColorPale = false
     }
     @IBAction func OpponentTeamBlue(_ sender: UIButton) {
-        opponentTeamColor = UIColor.blue
-        homeColorPale = false
+        guestTeamColor = UIColor.blue
+  //      homeColorPale = false
     }
     @IBAction func OpponentTeamRed(_ sender: UIButton) {
-        opponentTeamColor = UIColor.red
-        homeColorPale = false
+        guestTeamColor = UIColor.red
+       // homeColorPale = false
     }
     @IBAction func OpponentTeamWhite(_ sender: AnyObject) {
-        opponentTeamColor = UIColor.white
-        homeColorPale = true
+        guestTeamColor = UIColor.white
+     //   homeColorPale = true
         
     }
     @IBAction func OpponentTeamYellow(_ sender: AnyObject) {
-        opponentTeamColor = UIColor.yellow
-        homeColorPale = true
+        guestTeamColor = UIColor.yellow
+   //     homeColorPale = true
     }
     @IBAction func OpponentTeamGreen(_ sender: AnyObject) {
-        opponentTeamColor = UIColor.green
-        homeColorPale = true
+        guestTeamColor = UIColor.green
+ //       homeColorPale = true
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let NVC = segue.destination as! UINavigationController
         let whatVC = NVC.topViewController as! WhatHappendViewController
         whatVC.homeTeamColor = homeTeamColor
-        whatVC.guestTeamColor = opponentTeamColor
-        whatVC.homeColorPale = homeColorPale
-        whatVC.guestColorPale = guestColorPale
+        whatVC.guestTeamColor = guestTeamColor
+     //   whatVC.homeColorPale = homeColorPale
+    //  whatVC.guestColorPale = guestColorPale
         whatVC.Period = Period
         whatVC.currentMinute = Minute
         whatVC.currentScoreTeamOne = homeTeamScore

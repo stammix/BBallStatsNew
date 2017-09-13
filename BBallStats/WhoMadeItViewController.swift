@@ -14,6 +14,8 @@ class WhoMadeItViewController: UIViewController {
     var JerseyColor = UIColor.white
     var tappedAction = "NO ACTION"
     var actualMinute = 1
+    var homeTeamName = ""
+    var guestTeamName = ""
     var homeTeamColor = UIColor()
     var guestTeamColor = UIColor()
     var homeColorPale = true
@@ -24,6 +26,11 @@ class WhoMadeItViewController: UIViewController {
     var chosenTeam = 1
     var quarterLength = 10
     var GameTime = 10
+    var pointsOfAction = 0
+    
+    
+    
+    
   
     @IBOutlet weak var jersey1Button: UIButton!
     @IBOutlet weak var jersey2Button: UIButton!
@@ -41,9 +48,12 @@ class WhoMadeItViewController: UIViewController {
     
     
     @IBAction func T1P1Pressed(_ sender: UIButton) {
+ //       let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //let newStat = stat
+    //    newStat.player = player
         player = 1
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         let _ = navigationController?.popViewController(animated: true)
-        //navigationController?.popToRootViewControllerAnimated(true)
     }
     @IBAction func T1P2Pressed(_ sender: UIButton) {
         player = 2
@@ -94,14 +104,24 @@ class WhoMadeItViewController: UIViewController {
         playerToSwitchIn = 12
         self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
+ /*
+    func createStat(_ sender: AnyObject?) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let newStat = Stats(context: context)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        let _ = navigationController?.popViewController(animated: true)
+        
+    } */
     
      override func viewDidLoad() {
      super.viewDidLoad()
      //TeamColors
         
+        
+        
         JerseyColor = homeTeamColor
         
-     if homeTeamColor == UIColor.black {
+  /*   if homeTeamColor == UIColor.black {
      paleJerseyColor = false
      } else if homeTeamColor == UIColor.blue{
      paleJerseyColor = false
@@ -114,7 +134,7 @@ class WhoMadeItViewController: UIViewController {
      paleJerseyColor = true
      } else if homeTeamColor == UIColor.green{
      paleJerseyColor = true
-     }
+     } */
      
      
      if paleJerseyColor == true {
@@ -180,6 +200,7 @@ class WhoMadeItViewController: UIViewController {
         subVC.newPlayer = playerToSwitchIn
         subVC.homeTeamColor = homeTeamColor
         subVC.guestTeamColor = guestTeamColor
+        subVC.subTeamPale = paleJerseyColor
         subVC.tappedAction = tappedAction
         subVC.chosenTeam = chosenTeam
         subVC.quarterLength = quarterLength

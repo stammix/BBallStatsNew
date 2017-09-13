@@ -443,6 +443,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-Hr-thv">
+                                <state key="normal" title="Hans"/>
+                                <connections>
+                                    <action selector="testHans:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klQ-Nj-rua"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.67486379009999997" blue="0.1190480696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -473,8 +479,10 @@
                             <constraint firstItem="38x-TC-6SQ" firstAttribute="centerX" secondItem="XTA-ex-T1B" secondAttribute="centerX" id="bH2-zM-Q2W"/>
                             <constraint firstItem="8fJ-M6-5UU" firstAttribute="centerY" secondItem="W5H-dm-4PC" secondAttribute="centerY" id="bpW-FE-1hl"/>
                             <constraint firstItem="ak3-dm-YSv" firstAttribute="centerY" secondItem="MEG-yS-Jja" secondAttribute="centerY" id="c2A-Ca-3Qv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Si6-Hr-thv" secondAttribute="trailing" constant="15" id="cyD-Pu-WCc"/>
                             <constraint firstItem="9w3-7G-gOE" firstAttribute="top" secondItem="5Sc-dH-WR7" secondAttribute="bottom" constant="21.5" id="dSm-Sd-Edq"/>
                             <constraint firstItem="o3I-Fs-jFZ" firstAttribute="leading" secondItem="W5H-dm-4PC" secondAttribute="trailing" constant="88" id="dzN-tc-e2i"/>
+                            <constraint firstItem="Si6-Hr-thv" firstAttribute="top" secondItem="9w3-7G-gOE" secondAttribute="top" id="egA-TG-dnA"/>
                             <constraint firstItem="mgj-xp-Qyj" firstAttribute="centerY" secondItem="iHW-Na-Qu8" secondAttribute="centerY" id="etK-a1-7To"/>
                             <constraint firstItem="mgj-xp-Qyj" firstAttribute="leading" secondItem="iHW-Na-Qu8" secondAttribute="trailing" constant="42" id="gLp-KN-EGg"/>
                             <constraint firstItem="W5H-dm-4PC" firstAttribute="top" secondItem="Wha-dS-JMt" secondAttribute="bottom" constant="40" id="gVH-g8-TVZ"/>
@@ -565,12 +573,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-Zb-9YA">
+                                <frame key="frameInset" minX="572" minY="211" width="75" height="30"/>
+                                <state key="normal" title="TestButton"/>
+                                <connections>
+                                    <action selector="testButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="S4b-bp-7wT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Sft-10-jEK" firstAttribute="centerY" secondItem="KV3-Fg-UCc" secondAttribute="centerY" constant="43" id="3sb-GZ-v3x"/>
                             <constraint firstItem="fEL-ib-62H" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" id="7HS-cv-6oA"/>
+                            <constraint firstItem="O4r-Zb-9YA" firstAttribute="centerY" secondItem="gas-01-YXy" secondAttribute="centerY" id="C3y-JC-Lxb"/>
                             <constraint firstItem="RDv-dH-LYy" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="15" id="O0P-Mn-RSg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O4r-Zb-9YA" secondAttribute="trailing" id="PRH-rV-ery"/>
                             <constraint firstItem="Sft-10-jEK" firstAttribute="centerX" secondItem="gas-01-YXy" secondAttribute="centerX" id="SDa-pS-5cL"/>
                             <constraint firstItem="RDv-dH-LYy" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="97" id="WCk-JT-ary"/>
                             <constraint firstItem="fEL-ib-62H" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="79" id="evq-7I-lt3"/>
@@ -587,6 +604,7 @@
                     <connections>
                         <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
                         <outlet property="nextQuarterButtonLabel" destination="KV3-Fg-UCc" id="Gme-mX-EMw"/>
+                        <outlet property="statSummaryTableView" destination="RDv-dH-LYy" id="MlV-2B-CY5"/>
                         <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>
                     </connections>
