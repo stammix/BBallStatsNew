@@ -23,7 +23,6 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     var chosenTeam = 1
     var tappedAction = ""
     var pointsOfAction = 0
-    var stats : [Stat] = []
 
    
     @IBOutlet weak var statSummaryTableView: UITableView!
@@ -61,7 +60,6 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stats = createStats()
         
         statSummaryTableView.dataSource = self
         statSummaryTableView.delegate = self
@@ -96,36 +94,14 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
             
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stats.count
+       // return stats.count
+        return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let stat = stats[indexPath.row]
-        cell.textLabel?.text = "\(stat.homeTeam), \(stat.player), \(stat.action), \(stat.points)"
+//      let stat = stats[indexPath.row]
+//      cell.textLabel?.text = "\(stat.homeTeam), \(stat.player), \(stat.action), \(stat.points)"
         return cell
-    }
-    // let stat = stats[IndexPath.row]
-  //      cell.textLabel?.text = "\(stats.homeTeam), \(stats.player), \(stats.action), \(stats.points)"
-   //     return stat.count
-    
-    func createStats() -> [Stat] {
-        let stat1 = Stat()
-        stat1.homeTeam = homeTeamName
-        stat1.guestTeam = "Lörrach"
-        stat1.chosenTeam = 1
-        stat1.player = player
-        stat1.action = tappedAction
-        stat1.points = pointsOfAction
-        
-        let stat2 = Stat()
-        stat2.homeTeam = "TV BS"
-        stat2.guestTeam = "Lörrach"
-        stat2.chosenTeam = 2
-        stat2.player = 5
-        stat2.action = "2pointer"
-        stat2.points = 2
-        
-        return [stat1, stat2]
     }
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

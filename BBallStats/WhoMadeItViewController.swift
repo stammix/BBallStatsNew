@@ -48,9 +48,9 @@ class WhoMadeItViewController: UIViewController {
     
     
     @IBAction func T1P1Pressed(_ sender: UIButton) {
- //       let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    //let newStat = stat
-    //    newStat.player = player
+    //  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+      let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+     //   let newStat = stat(context: context)
         player = 1
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         let _ = navigationController?.popViewController(animated: true)
@@ -116,7 +116,6 @@ class WhoMadeItViewController: UIViewController {
      override func viewDidLoad() {
      super.viewDidLoad()
      //TeamColors
-        
         
         
         JerseyColor = homeTeamColor

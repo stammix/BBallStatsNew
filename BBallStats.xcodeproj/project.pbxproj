@@ -11,7 +11,6 @@
 		511CFB81B8196C028480433E /* Pods_BBallStatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3322084E7A8900EEAC3BD2B6 /* Pods_BBallStatsTests.framework */; };
 		5DB69373F84BEFB383512A15 /* Pods_BBallStatsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B084269426C2B7F057892C7D /* Pods_BBallStatsUITests.framework */; };
 		860341861DB419A600BE4CB7 /* InGameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */; };
-		8615D7701F60A6590042B22B /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615D76F1F60A6590042B22B /* Stat.swift */; };
 		862D64961DCA922D007783F3 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D64951DCA922D007783F3 /* BreakViewController.swift */; };
 		864436471DAFF5E100C7C6D8 /* BballStatsJerseyBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436451DAFF5E100C7C6D8 /* BballStatsJerseyBlack.png */; };
 		864436481DAFF5E100C7C6D8 /* BballStatsJerseyWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 864436461DAFF5E100C7C6D8 /* BballStatsJerseyWhite.png */; };
@@ -27,6 +26,7 @@
 		86A0D84B1DAEDD7200DA3530 /* BBallStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D84A1DAEDD7200DA3530 /* BBallStatsTests.swift */; };
 		86A0D8561DAEDD7200DA3530 /* BBallStatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */; };
 		86A0D8641DAEE88700DA3530 /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */; };
+		86D26D7D1F6AD03F0072FAC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D26D7C1F6AD03F0072FAC6 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 		74152515DECF2F1873854B37 /* Pods-BBallStats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBallStats.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBallStats/Pods-BBallStats.release.xcconfig"; sourceTree = "<group>"; };
 		74D0DF10D2D3303AD68E0D84 /* Pods-BBallStatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBallStatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBallStatsTests/Pods-BBallStatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		860341851DB419A600BE4CB7 /* InGameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameSettingsViewController.swift; sourceTree = "<group>"; };
-		8615D76F1F60A6590042B22B /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		862D64951DCA922D007783F3 /* BreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		864436451DAFF5E100C7C6D8 /* BballStatsJerseyBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BballStatsJerseyBlack.png; path = ../BballStatsJerseyBlack.png; sourceTree = "<group>"; };
 		864436461DAFF5E100C7C6D8 /* BballStatsJerseyWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BballStatsJerseyWhite.png; path = ../BballStatsJerseyWhite.png; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		86A0D8551DAEDD7200DA3530 /* BBallStatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallStatsUITests.swift; sourceTree = "<group>"; };
 		86A0D8571DAEDD7200DA3530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A0D8631DAEE88700DA3530 /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
+		86D26D7C1F6AD03F0072FAC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B084269426C2B7F057892C7D /* Pods_BBallStatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBallStatsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B278C1C5AB9CDD4C30526D70 /* Pods-BBallStatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBallStatsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBallStatsUITests/Pods-BBallStatsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C92592535A3EAC8E20CC912C /* Pods-BBallStatsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBallStatsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBallStatsUITests/Pods-BBallStatsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D26D7D1F6AD03F0072FAC6 /* CoreData.framework in Frameworks */,
 				2BF06AAF6E5F5275C0319A67 /* Pods_BBallStats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +113,7 @@
 		1745B4BD6AFE426218DF3A41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86D26D7C1F6AD03F0072FAC6 /* CoreData.framework */,
 				63E3D5FC92B1401D9F184494 /* Pods_BBallStats.framework */,
 				3322084E7A8900EEAC3BD2B6 /* Pods_BBallStatsTests.framework */,
 				B084269426C2B7F057892C7D /* Pods_BBallStatsUITests.framework */,
@@ -150,7 +152,6 @@
 				864436491DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift */,
 				869AAAE01DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift */,
 				869AAAE21DC5730200BA431A /* SubstitutionViewController.swift */,
-				8615D76F1F60A6590042B22B /* Stat.swift */,
 				862D64951DCA922D007783F3 /* BreakViewController.swift */,
 				869C84821DB0268E00E43075 /* Main.storyboard */,
 				864436461DAFF5E100C7C6D8 /* BballStatsJerseyWhite.png */,
@@ -521,7 +522,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8615D7701F60A6590042B22B /* Stat.swift in Sources */,
 				869AAAE31DC5730200BA431A /* SubstitutionViewController.swift in Sources */,
 				8644364A1DAFFE3D00C7C6D8 /* WhoMadeItViewController.swift in Sources */,
 				869AAAE11DC56AB400BA431A /* WhoMadeItBothTeamsViewController.swift in Sources */,
@@ -594,6 +594,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -644,6 +645,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
