@@ -657,6 +657,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
+                        <outlet property="nextQuarterButtonLabel" destination="JVi-WR-7td" id="4qE-3Q-3zC"/>
                         <outlet property="statSummaryTableView" destination="RDv-dH-LYy" id="MlV-2B-CY5"/>
                         <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>

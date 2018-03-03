@@ -33,6 +33,8 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var QuarterBreakTitleLabel: UILabel!
     
     
+    @IBOutlet weak var nextQuarterButtonLabel: UIButton!
+    
     @IBOutlet weak var summaryLabel: UILabel!
     
     @IBAction func nextQuarterButton(_ sender: AnyObject) {
@@ -60,7 +62,6 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
             if let setPeriod = setPeriodObject as? String {
                 if setPeriod == "1" {
                     Period = 1
- //                   QuarterBreakButtonLabel = "Start Quarter \(Period + 1)"
                     actualMinute  = quarterLength + 1
                     print ("QuarterBreak Period \(Period)")
                 } else if setPeriod == "2" {
@@ -76,34 +77,37 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
                     actualMinute  = (4 * quarterLength) + 1
                     print ("QuarterBreak Period \(Period)")
                 }
+            }
             
         if Period == 1 {
             print("*** Break after Period 1")
+            nextQuarterButtonLabel.setTitle("Start Quarter \(Period + 1)", for: .normal)
             summaryLabel.text = "Summary Quarter 1"
         } else if Period == 2 {
             print("*** Break after Period 2")
+            nextQuarterButtonLabel.setTitle("Start Quarter \(Period + 1)", for: .normal)
             summaryLabel.text = "Summary Quarter 2"
         } else if Period == 3 {
             print("*** Break after Period 3")
+            nextQuarterButtonLabel.setTitle("Start Quarter \(Period + 1)", for: .normal)
             summaryLabel.text = "Summary Quarter 3"
         } else if Period == 4 && homeTeamScore == guestTeamScore{
             print("*** Break after Period 4")
             summaryLabel.text = "Summary Quarter 4"
             QuarterBreakTitleLabel.text = "Game Summary"
-      //      QuarterBreakButtonLabel.setTitle("Overtime Baby", for: .normal)
+            nextQuarterButtonLabel.setTitle("Overtime Baby", for: .normal)
         } else if Period > 4 && homeTeamScore == guestTeamScore{
             print("*** Break after OT \(Period - 4)")
             summaryLabel.text = "Summary OT \(Period - 4)"
             QuarterBreakTitleLabel.text = "OT Summary"
-        //    QuarterBreakButtonLabel.setTitle("Overtime Baby", for: .normal)
+            nextQuarterButtonLabel.setTitle("Overtime Baby", for: .normal)
         } else if Period >= 4 {
             print("*** Break after Period 4")
             summaryLabel.text = "Summary Quarter 4"
             QuarterBreakTitleLabel.text = "Game Summary"
-          //  QuarterBreakButtonLabel.setTitle("Save GameStats and upload", for: .normal)
+            nextQuarterButtonLabel.setTitle("Save GameStats and upload", for: .normal)
         }
             
-    }
 }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // return stats.count
