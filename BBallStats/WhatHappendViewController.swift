@@ -12,8 +12,8 @@ import CoreData
 
 class WhatHappendViewController: UIViewController {
 
-    var homeTeamColor = UIColor()
-    var guestTeamColor = UIColor()
+    var homeTeamColor = UIColor.white
+    var guestTeamColor = UIColor.black
     var homeColorPale = true
     var guestColorPale = false
     var currentMinute = 1
@@ -23,7 +23,7 @@ class WhatHappendViewController: UIViewController {
     var currentMinutePlusTwo = 3
     var currentScoreTeamOne = 0
     var currentScoreTeamTwo = 0
-    var Period = 1
+    var Period = Int()
     var segueToWhoMade = "whatHappendToWhoMadeItSegue"
     var tappedAction = "2pointer"
     var collectStatsForBothTeams = 1
@@ -62,10 +62,6 @@ class WhatHappendViewController: UIViewController {
     @IBOutlet weak var currentScoreTeamTwoLabel: UILabel!
     
     @IBOutlet weak var periodLabel: UILabel!
-    @IBAction func testHans(_ sender: AnyObject) {
-        homeTeamName = "Hans"
-    
-    }
     
     @IBAction func twoMinutesBackPressed(_ sender: UIButton) {
         if currentMinute > 2 {
@@ -247,7 +243,10 @@ class WhatHappendViewController: UIViewController {
         let breakVC = segue.destination as! BreakViewController
         breakVC.Period = Period
         breakVC.quarterLength = quarterLength
-        breakVC.homeTeamName = homeTeamName
+        breakVC.homeTeamColor = homeTeamColor
+        breakVC.guestTeamColor = guestTeamColor
+        breakVC.collectStatsForBothTeams = collectStatsForBothTeams
+            
         } else if segue.identifier == "toInGameSettingsSegue" {
             let keepScore = segue.destination as! InGameSettingsViewController
             keepScore.Minute = currentMinute
@@ -268,7 +267,7 @@ class WhatHappendViewController: UIViewController {
         
         
         
-          print("*** what homeColorPale \(homeColorPale), guestColorPale \(guestColorPale)")
+          print("** what homeColorPale \(homeColorPale), guestColorPale \(guestColorPale)")
         GameTime = quarterLength
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -375,7 +374,7 @@ class WhatHappendViewController: UIViewController {
             print("Couldn't fetch results")
         } */
     
-      /*  let setPeriodObject = UserDefaults.standard.object(forKey: "period")
+        let setPeriodObject = UserDefaults.standard.object(forKey: "period")
         if let setPeriod = setPeriodObject as? String {
             if setPeriod == "1" {
                     Period = 1
@@ -420,7 +419,7 @@ class WhatHappendViewController: UIViewController {
             resetMinutes()
             updateLabels()
             }
-        } */
+        }
         
      /*   let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
         if let lastStatMinute = lastStatMinuteObject as? String {

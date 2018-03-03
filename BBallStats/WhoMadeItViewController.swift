@@ -49,7 +49,7 @@ class WhoMadeItViewController: UIViewController {
     
     @IBAction func T1P1Pressed(_ sender: UIButton) {
     //  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-      let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+      // let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
      //   let newStat = stat(context: context)
         player = 1
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
